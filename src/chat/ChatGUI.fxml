@@ -7,7 +7,7 @@
    <children>
       <AnchorPane prefHeight="542.0" prefWidth="742.0">
          <children>
-            <ListView fx:id="chatListView" layoutX="144.0" layoutY="60.0" prefHeight="482.0" prefWidth="599.0" />
+            <ListView fx:id="chatListView" layoutX="144.0" layoutY="60.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="482.0" prefWidth="599.0" />
          </children>
       </AnchorPane>
    </children>
