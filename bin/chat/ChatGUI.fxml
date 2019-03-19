@@ -3,11 +3,11 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.ControllerChat">
    <children>
       <AnchorPane prefHeight="542.0" prefWidth="742.0">
          <children>
-            <ListView id="chatListView" layoutX="144.0" layoutY="60.0" prefHeight="482.0" prefWidth="599.0" />
+            <ListView fx:id="chatListView" layoutX="144.0" layoutY="60.0" prefHeight="482.0" prefWidth="599.0" />
          </children>
       </AnchorPane>
    </children>

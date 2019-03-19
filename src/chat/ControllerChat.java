@@ -10,17 +10,24 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 
 public class ControllerChat implements Initializable {
-	@FXML
-	private ListView<String> chatListView;
 	
+	@FXML
+	private ListView<ChatMessage> chatListView;
+	
+	private ObservableList<ChatMessage> messageObservableList; 
 	
 	public ControllerChat() {
-		chatListView.getItems().add("asdfasfda");
+		//chatListView.getItems().add("asdfasfda");
+		messageObservableList = FXCollections.observableArrayList();
+		messageObservableList.addAll(
+				new ChatMessage("blablabla", true),
+				new ChatMessage("blablabla2", false));
 	}
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		
+		chatListView.setItems(messageObservableList);
+		chatListView.setCellFactory(lv -> new ChatListViewCell());
 		
 	}
 }
