@@ -1,14 +1,10 @@
 package chatlist;
 	
 import javafx.application.Application;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ListView;
-import javafx.scene.layout.BorderPane;
 
 
 public class ChatList extends Application {
@@ -26,11 +22,12 @@ public class ChatList extends Application {
 		}
 		
 		
-
 		
 	}
 	
 	public static void main(String[] args) {
 		launch(args);
 	}
+	
+	
 }
