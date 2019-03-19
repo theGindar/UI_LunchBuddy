@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="542.0" prefWidth="742.0">
+         <children>
+            <ListView id="chatListView" layoutX="144.0" layoutY="60.0" prefHeight="482.0" prefWidth="599.0" />
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>
-
