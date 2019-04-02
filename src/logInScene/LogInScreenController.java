@@ -46,7 +46,7 @@ public class LogInScreenController {
 	 **/
 	public void ProfilAnmelden(ActionEvent event) throws IOException {
 
-		Parent ProfilAnmeldenParent = FXMLLoader.load(getClass().getResource(".fxml")); // !!!!Swipe fxml anfügen!!!!
+		Parent ProfilAnmeldenParent = FXMLLoader.load(getClass().getResource("/swipeScreen/Swipe.fxml")); // 
 		Scene ProfilAnmeldenScene = new Scene(ProfilAnmeldenParent);
 
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -61,7 +61,7 @@ public class LogInScreenController {
 	 **/
 	public void AnmeldenZurueck(ActionEvent event) throws IOException {
 
-		Parent AnmeldenZurueckParent = FXMLLoader.load(getClass().getResource("Start_gui.fxml"));
+		Parent AnmeldenZurueckParent = FXMLLoader.load(getClass().getResource("/start/Start_gui.fxml"));
 		Scene AnmeldenZurueckScene = new Scene(AnmeldenZurueckParent);
 
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();

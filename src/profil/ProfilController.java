@@ -47,7 +47,7 @@ public class ProfilController {
 	und zur ProfilBearbeitenScene weitergeleitet wird **/
 	public void ProfilBearbeiten(ActionEvent event) throws IOException {
 		
-		Parent ProfilParent = FXMLLoader.load(getClass().getResource("ProfilBearbeiten.fxml"));
+		Parent ProfilParent = FXMLLoader.load(getClass().getResource("/profilBearbeiten/ProfilBearbeiten.fxml"));
 		Scene ProfilScene = new Scene(ProfilParent);
 		
 		//This line gets to Stage Information
