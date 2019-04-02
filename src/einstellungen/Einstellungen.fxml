@@ -24,7 +24,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <ToggleButton layoutX="40.0" layoutY="236.0" mnemonicParsing="false" text="ToggleButton" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="236.0" />
-      <ToggleButton layoutX="40.0" layoutY="159.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="ToggleButton" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="159.0" />
+      <ToggleButton layoutX="40.0" layoutY="236.0" mnemonicParsing="false" text="Aktivieren/Deaktivieren" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="236.0" />
+      <ToggleButton layoutX="40.0" layoutY="159.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="Aktivieren/Deaktivieren" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="159.0" />
    </children>
 </AnchorPane>
