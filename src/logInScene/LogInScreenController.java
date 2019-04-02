@@ -33,6 +33,7 @@ public class LogInScreenController {
 	@FXML
 	private PasswordField PasswordLogIn;
 
+	// Man kann sich nur Anmelden, wenn man seine E-Mail und sein Password angegeben hat 
 	@FXML
 	public void initialize() {
 		this.btnLogInAnmelden.disableProperty().bind(
