@@ -2,6 +2,7 @@ package profilBearbeiten;
 
 import java.io.IOException;
 
+import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -46,8 +47,15 @@ public class ProfilBearbeitenController {
 	private PasswordField Password;
 	
 		
-	
-	
+	// Profil kann nur gepeichert werden, wenn alle Pflichtfelder aufgefüllt wurden
+		@FXML
+		public void initialize() {
+			this.btnSpeichern.disableProperty().bind(Bindings.or(this.txtName.textProperty().isEmpty(),
+					this.txtMail.textProperty().isEmpty()));
+			this.btnSpeichern.disableProperty().bind(Bindings.or(this.Password.textProperty().isEmpty(),
+					this.txtBeschreibung.textProperty().isEmpty()));
+
+		}	
 	
 	
 	/**Wenn man in der ProfilbearbeitenScene den Speicher Button drückt 
