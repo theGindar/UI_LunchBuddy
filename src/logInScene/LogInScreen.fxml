@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane fx:id="hintergrundLogIn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LogInScreenController">
+<AnchorPane fx:id="hintergrundLogIn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logInScene.LogInScreenController">
    <children>
       <Button fx:id="btnLogInAnmelden" layoutX="97.0" layoutY="479.0" mnemonicParsing="false" onAction="#ProfilAnmelden" prefHeight="43.0" prefWidth="106.0" text="Einloggen" />
       <Button fx:id="btnLogInZurueck" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#AnmeldenZurueck" text="Zurück" />
@@ -30,10 +30,6 @@
             <PasswordField fx:id="PasswordLogIn" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
-      <ImageView fx:id="imgLogInLogo" fitHeight="200.0" fitWidth="244.0" layoutX="28.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true" >
-      	<image>
-           <Image url="application/donut.png" /> 
-         </image>
-      </ImageView>
+      
    </children>
 </AnchorPane>
