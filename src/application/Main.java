@@ -15,7 +15,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 		//	EinstellungenController.class.getClassLoader().getResource("Einstellungen.fxml");
-			Parent root = FXMLLoader.load(getClass().getResource("/logInScene/LogInScreen.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("/start/Start_gui.fxml"));
 
 			Scene scene = new Scene(root,400,400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());

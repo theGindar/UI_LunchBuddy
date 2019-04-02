@@ -57,6 +57,21 @@ public class ProfilController {
 		window.show();
 	}	
 	
+	/**
+	 * Wenn man in der ProfilSceene den Zurück-Button drückt und zum
+	 * SwipeScreen weitergeleitet wird
+	 **/
+	public void ProfilZurueck(ActionEvent event) throws IOException {
+
+		Parent ProfilZurueckParent = FXMLLoader.load(getClass().getResource("/swipeScreen/Swipe.fxml"));
+		Scene ProfilZurueckScene = new Scene(ProfilZurueckParent);
+
+		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+		window.setScene(ProfilZurueckScene);
+		window.show();
+	}
+	
 
 	
 	}

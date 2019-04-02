@@ -63,6 +63,21 @@ public void ProfilErstellenSpeichern(ActionEvent event) throws IOException {
 		window.show();
 	}
 
+/**
+ * Wenn man in der ProfilErstellenScene den Zurück-Button drückt und zum
+ * AnfangsScreen(Profil erstellen//anmelden) weitergeleitet wird
+ **/
+public void ProfilErstellenZurueck(ActionEvent event) throws IOException {
+
+	Parent ProfilErstellenParent = FXMLLoader.load(getClass().getResource("/start/Start_gui.fxml"));
+	Scene ProfilErstellenScene = new Scene(ProfilErstellenParent);
+
+	Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+	window.setScene(ProfilErstellenScene);
+	window.show();
+}
+
 
 
 }

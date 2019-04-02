@@ -14,10 +14,10 @@
             <Font size="17.0" />
          </font>
       </Button>
-      <Button fx:id="btnRegister" layoutX="57.0" layoutY="452.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="233.0" text="Registrieren" textAlignment="CENTER" />
+      <Button fx:id="btnRegister" layoutX="57.0" layoutY="452.0" mnemonicParsing="false" onAction="#Register" prefHeight="25.0" prefWidth="233.0" text="Registrieren" textAlignment="CENTER" />
       <ImageView fitHeight="208.0" fitWidth="215.0" layoutX="73.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
          <image>
-           <Image url="application/donut.png" /> 
+           <Image url="/application/donut.png" /> 
          </image>
       </ImageView>
       <Text layoutX="26.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name von Application">

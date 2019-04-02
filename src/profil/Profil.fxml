@@ -72,7 +72,7 @@
       <RadioButton fx:id="ButtonProfilPartnersuche" disable="true" layoutX="222.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="92.0" text="Nein" toggleGroup="$partner" />
       <PasswordField fx:id="ProfilPassword" disable="true" layoutX="130.0" layoutY="215.0" prefHeight="25.0" prefWidth="164.0" />
       <TextField fx:id="txtProfilAlter" disable="true" layoutX="130.0" layoutY="280.0" prefHeight="25.0" prefWidth="164.0" />
-      <Button fx:id="btnZurueck" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="66.0" text="&lt;zurück" />
+      <Button fx:id="btnZurueck" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ProfilZurueck" prefHeight="25.0" prefWidth="66.0" text="&lt;zurück" />
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />
