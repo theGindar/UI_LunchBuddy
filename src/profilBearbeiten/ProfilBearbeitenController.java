@@ -1,4 +1,4 @@
-package ProfilBearbeiten;
+package profilBearbeiten;
 
 import java.io.IOException;
 
