@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class SwipeController {
@@ -17,6 +18,10 @@ public class SwipeController {
 	private Button btnProfil;
 	@FXML
 	private Button btnEinstellungen;
+	@FXML 
+	private ImageView ZuEinstellungen;
+	
+	
 	
 	
 	
@@ -54,6 +59,22 @@ public class SwipeController {
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
 		window.setScene(ZumProfilScene);
+		window.show();
+	}
+	
+	
+	/**
+	 * Wenn man in der SwipeScene den Chats-Button drückt und zum
+	 * ChatScreen weitergeleitet wird
+	 **/
+	public void ZumChat(ActionEvent event) throws IOException {
+
+		Parent ZumChatParent = FXMLLoader.load(getClass().getResource("/chatlist/Chats_gui.fxml"));
+		Scene ZumChatScene = new Scene(ZumChatParent);
+
+		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+		window.setScene(ZumChatScene);
 		window.show();
 	}
 }
