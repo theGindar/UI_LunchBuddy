@@ -1,4 +1,4 @@
-package profil;
+package Profil;
 
 import java.io.IOException;
 

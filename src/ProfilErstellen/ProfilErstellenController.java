@@ -1,4 +1,4 @@
-package profilErstellen;
+package ProfilErstellen;
 
 import java.io.IOException;
 

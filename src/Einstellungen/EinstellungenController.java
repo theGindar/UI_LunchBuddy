@@ -1,4 +1,4 @@
-package einstellungen;
+package Einstellungen;
 
 public class EinstellungenController {
 
