@@ -1,8 +1,13 @@
 package profilBearbeiten;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 
+import javax.imageio.ImageIO;
+
 import javafx.beans.binding.Bindings;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,8 +21,10 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 // ProfilBearbeiten.fmxl 
@@ -40,11 +47,16 @@ public class ProfilBearbeitenController {
 	@FXML
 	private Button btnSpeichern;
 	@FXML
+	private Button btnChangeImageB;
+	@FXML
 	private AnchorPane hintergrund;
 	@FXML
 	private ToggleGroup partner;
 	@FXML
 	private PasswordField Password;
+	
+	private FileChooser fileChooser;
+	private File filepath;
 	
 		
 	// Profil kann nur gepeichert werden, wenn alle Pflichtfelder aufgefüllt wurden
@@ -56,6 +68,39 @@ public class ProfilBearbeitenController {
 					this.txtBeschreibung.textProperty().isEmpty()));
 
 		}	
+		
+		//Profilbild Ändern
+		
+		public void ProfilBildAendern(ActionEvent event) {
+			Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+			
+			fileChooser = new FileChooser();
+			fileChooser.setTitle("Bild auswählen");
+			
+			// Benutzerverzeichnis festlegen oder zum Laufwerk wechseln
+			String userDirectoryString = System.getProperty("Bibiothek") + "\\Bilder";
+			File userDirectory = new File(userDirectoryString);
+			
+			if(!userDirectory.canRead())
+				userDirectory = new File("c:/");
+				
+				fileChooser.setInitialDirectory(userDirectory);
+			
+			
+			this.filepath = fileChooser.showOpenDialog(stage);
+			
+			//das Profilbild ändern indem man ein neues Bild hochlädt
+			try {
+				BufferedImage bufferedImage = ImageIO.read(filepath);
+				Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+				Picture.setImage(image);
+				
+			}catch(IOException e) {
+				
+			}
+		}
+		
+		
 	
 	
 	/**Wenn man in der ProfilbearbeitenScene den Speicher Button drückt 
