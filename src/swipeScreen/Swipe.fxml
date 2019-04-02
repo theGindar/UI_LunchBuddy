@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="hintergrundLogIn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swipeScreen.SwipeController">
+<AnchorPane fx:id="hintergrundSwipe" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swipeScreen.SwipeController">
    <children>
-      <Button fx:id="btnProfil" layoutX="25.0" layoutY="490.0" mnemonicParsing="false" onAction="#ZumProfil" text="Zum Profil" />
-      <Button fx:id="btnEinstellungen" layoutX="190.0" layoutY="490.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Einstellungen" />
-      <ImageView fx:id="ZuEinstelllungen" fitHeight="52.0" fitWidth="56.0" layoutX="217.0" layoutY="432.0" onMouseClicked="#ZumEinstellungen" pickOnBounds="true" preserveRatio="true">
-       <image>
-          <Image url="/application/einstellungen.png" /> 
-        </image>
-      </ImageView>
+      <Button fx:id="btnEinstellungen" layoutX="235.0" layoutY="14.0" mnemonicParsing="false" onAction="#ZumEinstellungen" prefHeight="37.0" prefWidth="30.0">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/application/einstellungen.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="btnProfil" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ZumProfil" prefHeight="37.0" prefWidth="30.0">
+         <graphic>
+            <ImageView fx:id="imgProfil" fitHeight="29.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/application/profile_icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>
