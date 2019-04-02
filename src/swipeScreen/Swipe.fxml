@@ -10,7 +10,7 @@
       <Button fx:id="btnEinstellungen" layoutX="190.0" layoutY="490.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Einstellungen" />
       <ImageView fx:id="ZuEinstelllungen" fitHeight="52.0" fitWidth="56.0" layoutX="217.0" layoutY="432.0" onMouseClicked="#ZumEinstellungen" pickOnBounds="true" preserveRatio="true">
        <image>
-          <Image url="/application/einstellungen.png" /> 
+          <Image url="@/application/einstellungen.png" /> 
         </image>
       </ImageView>
    </children>
