@@ -2,6 +2,7 @@ package profilErstellen;
 
 import java.io.IOException;
 
+import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,8 +21,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class ProfilErstellenController {
-	
-	@FXML												
+
+	@FXML
 	private TextField txtErstellenName;
 	@FXML
 	private TextField txtErstellenMail;
@@ -45,39 +46,43 @@ public class ProfilErstellenController {
 	private ToggleGroup partnerErstellen;
 	@FXML
 	private PasswordField PasswordErstellen;
-	
-	
-	
-	
-	///**Wenn man in der ProfilErstellenScreen den Erstellen-Button drückt 
-	//und zum SwipeScreen weitergeleitet wird **/
-public void ProfilErstellenSpeichern(ActionEvent event) throws IOException {
-		
+
+	// Profil kann nur erstellt werden, wenn alle Pflichtfelder aufgefüllt wurden
+	@FXML
+	public void initialize() {
+		this.btnErstellenSpeichern.disableProperty().bind(Bindings.or(this.txtErstellenName.textProperty().isEmpty(),
+				this.txtErstellenMail.textProperty().isEmpty()));
+		this.btnErstellenSpeichern.disableProperty().bind(Bindings.or(this.PasswordErstellen.textProperty().isEmpty(),
+				this.txtErstellenBeschreibung.textProperty().isEmpty()));
+
+	}
+
+	/// **Wenn man in der ProfilErstellenScreen den Erstellen-Button drückt
+	// und zum SwipeScreen weitergeleitet wird **/
+	public void ProfilErstellenSpeichern(ActionEvent event) throws IOException {
+
 		Parent ProfilErstellenParent = FXMLLoader.load(getClass().getResource("/swipeScreen/Swipe.fxml"));
 		Scene ProfilErstellenScene = new Scene(ProfilErstellenParent);
-		
-		
-		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-		
+
+		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
 		window.setScene(ProfilErstellenScene);
 		window.show();
 	}
 
-/**
- * Wenn man in der ProfilErstellenScene den Zurück-Button drückt und zum
- * AnfangsScreen(Profil erstellen//anmelden) weitergeleitet wird
- **/
-public void ProfilErstellenZurueck(ActionEvent event) throws IOException {
+	/**
+	 * Wenn man in der ProfilErstellenScene den Zurück-Button drückt und zum
+	 * AnfangsScreen(Profil erstellen//anmelden) weitergeleitet wird
+	 **/
+	public void ProfilErstellenZurueck(ActionEvent event) throws IOException {
 
-	Parent ProfilErstellenParent = FXMLLoader.load(getClass().getResource("/start/Start_gui.fxml"));
-	Scene ProfilErstellenScene = new Scene(ProfilErstellenParent);
+		Parent ProfilErstellenParent = FXMLLoader.load(getClass().getResource("/start/Start_gui.fxml"));
+		Scene ProfilErstellenScene = new Scene(ProfilErstellenParent);
 
-	Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-	window.setScene(ProfilErstellenScene);
-	window.show();
-}
-
-
+		window.setScene(ProfilErstellenScene);
+		window.show();
+	}
 
 }
