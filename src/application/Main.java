@@ -23,6 +23,7 @@ public class Main extends Application {
 			primaryStage.getIcons().add(new Image("/application/donut.png"));
 			primaryStage.setTitle("Lunchbuddy");
 			
+			
 
 		} catch (Exception e) {
 			e.printStackTrace();

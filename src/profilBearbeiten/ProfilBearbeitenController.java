@@ -24,6 +24,7 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -54,6 +55,8 @@ public class ProfilBearbeitenController {
 	private ToggleGroup partner;
 	@FXML
 	private PasswordField Password;
+	@FXML
+	private Circle kreis;
 	
 	private FileChooser fileChooser;
 	private File filepath;
