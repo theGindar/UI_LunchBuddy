@@ -1,4 +1,4 @@
-package LogInScene;
+package logInScene;
 
 import java.io.IOException;
 
