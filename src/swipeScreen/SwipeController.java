@@ -56,4 +56,20 @@ public class SwipeController {
 		window.setScene(ZumProfilScene);
 		window.show();
 	}
+	
+	
+	/**
+	 * Wenn man in der SwipeScene den Chats-Button drückt und zum
+	 * ChatScreen weitergeleitet wird
+	 **/
+	public void ZumChat(ActionEvent event) throws IOException {
+
+		Parent ZumChatParent = FXMLLoader.load(getClass().getResource("/chatlist/Chats_gui.fxml"));
+		Scene ZumChatScene = new Scene(ZumChatParent);
+
+		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+		window.setScene(ZumChatScene);
+		window.show();
+	}
 }
