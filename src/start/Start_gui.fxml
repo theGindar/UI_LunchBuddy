@@ -9,18 +9,18 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="start.ControllerStart">
    <children>
-      <Button fx:id="btnLogin" layoutX="57.0" layoutY="403.0" mnemonicParsing="false" onAction="#Login" prefHeight="25.0" prefWidth="233.0" text="Login" textAlignment="CENTER">
+      <Button fx:id="btnLogin" layoutX="21.0" layoutY="388.0" mnemonicParsing="false" onAction="#Login" prefHeight="40.0" prefWidth="260.0" text="Login" textAlignment="CENTER" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <Button fx:id="btnRegister" layoutX="57.0" layoutY="452.0" mnemonicParsing="false" onAction="#Register" prefHeight="25.0" prefWidth="233.0" text="Registrieren" textAlignment="CENTER" />
-      <ImageView fitHeight="208.0" fitWidth="215.0" layoutX="73.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+      <Button fx:id="btnRegister" layoutX="57.0" layoutY="452.0" mnemonicParsing="false" onAction="#Register" prefHeight="31.0" prefWidth="260.0" text="Registrieren" textAlignment="CENTER" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <ImageView fitHeight="208.0" fitWidth="260.0" layoutX="73.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="110.0">
          <image>
-           <Image url="/application/donut.png" /> 
+           <Image url="@application/donut.png" /> 
          </image>
       </ImageView>
-      <Text layoutX="26.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name von Application">
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="LunchBuddy" textAlignment="CENTER" wrappingWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
          <font>
             <Font size="30.0" />
          </font>
