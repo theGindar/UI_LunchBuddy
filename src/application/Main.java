@@ -17,7 +17,7 @@ public class Main extends Application {
 		//	EinstellungenController.class.getClassLoader().getResource("Einstellungen.fxml");
 			Parent root = FXMLLoader.load(getClass().getResource("/start/Start_gui.fxml"));
 
-			Scene scene = new Scene(root,400,400);
+			Scene scene = new Scene(root,400,530);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
