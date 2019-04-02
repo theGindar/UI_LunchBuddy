@@ -6,23 +6,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane fx:id="hintergrundSwipe" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swipeScreen.SwipeController">
-   <children>
-      <Button fx:id="btnEinstellungen" layoutX="235.0" layoutY="14.0" mnemonicParsing="false" onAction="#ZumEinstellungen" prefHeight="37.0" prefWidth="30.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
-         <graphic>
-            <ImageView fitHeight="29.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@/application/einstellungen.png" />
-               </image>
-            </ImageView>
-         </graphic></Button>
-      <Button fx:id="btnProfil" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ZumProfil" prefHeight="37.0" prefWidth="30.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
-         <graphic>
-            <ImageView fx:id="imgProfil" fitHeight="29.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@/application/profile_icon.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-   </children>
+	<children>
+		<Button fx:id="btnEinstellungen" layoutX="235.0" layoutY="14.0" mnemonicParsing="false" onAction="#ZumEinstellungen" prefHeight="37.0" prefWidth="30.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+			<graphic>
+				<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@/application/einstellungen.png" />
+					</image>
+				</ImageView>
+			</graphic>
+		</Button>
+		<Button fx:id="btnProfil" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ZumProfil" prefHeight="37.0" prefWidth="30.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+			<graphic>
+				<ImageView fx:id="imgProfil" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@/application/profile_icon.png" />
+					</image>
+				</ImageView>
+			</graphic>
+		</Button>
+	</children>
 </AnchorPane>

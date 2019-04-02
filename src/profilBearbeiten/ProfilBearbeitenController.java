@@ -71,6 +71,23 @@ public class ProfilBearbeitenController {
 		window.setScene(ProfilBearbeitenScene);
 		window.show();
 	}
+	
+	/**
+	 * Wenn man in der Profil bearbeiten Scene den Zurück-Button drückt gelangt man
+	 * wieder zum Profil
+	 **/
+	public void ProfilZurueckk(ActionEvent event) throws IOException {
+		
+		Parent ProfilBearbeitenParent = FXMLLoader.load(getClass().getResource("/profil/Profil.fxml"));
+		Scene ProfilBearbeitenScene = new Scene(ProfilBearbeitenParent);
+		
+		
+		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		
+		window.setScene(ProfilBearbeitenScene);
+		window.show();
+	}
+	
 
 
 
