@@ -50,10 +50,10 @@ public class ProfilErstellenController {
 	
 	
 	///**Wenn man in der ProfilErstellenScreen den Erstellen-Button drückt 
-	//und zum EinloggScreen weitergeleitet wird **/
+	//und zum SwipeScreen weitergeleitet wird **/
 public void ProfilErstellenSpeichern(ActionEvent event) throws IOException {
 		
-		Parent ProfilErstellenParent = FXMLLoader.load(getClass().getResource("LogInScreen.fxml"));
+		Parent ProfilErstellenParent = FXMLLoader.load(getClass().getResource("Swipe.fxml"));
 		Scene ProfilErstellenScene = new Scene(ProfilErstellenParent);
 		
 		
