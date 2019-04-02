@@ -27,7 +27,7 @@ public class ControllerStart {
     /**      **/
     public void Login(ActionEvent event) throws IOException {
 
-    	Parent LoginParent = FXMLLoader.load(getClass().getResource("/logInScreen/LogInScreen.fxml"));
+    	Parent LoginParent = FXMLLoader.load(getClass().getResource("/logInScene/LogInScreen.fxml"));
     	Scene LoginScene = new Scene(LoginParent);
 
 
