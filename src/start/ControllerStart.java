@@ -22,18 +22,19 @@ public class ControllerStart {
     @FXML
     private Button btnRegister;
 
-    @FXML
-    void changeScreenButtonPushed(ActionEvent event) throws IOException {
-    	System.out.println("Login Button");
+
+
+    /**      **/
+    public void Login(ActionEvent event) throws IOException {
     	
-    	Parent Chats_guiParent = FXMLLoader.load(getClass().getResource("Chats_gui.fxml")); 
-		Scene Chats_guiScene = new Scene(Chats_guiParent);
-		
-		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-		
-		window.setScene(Chats_guiScene);
-		window.show();
+    	Parent LoginParent = FXMLLoader.load(getClass().getResource("LogInScreen.fxml"));
+    	Scene LoginScene = new Scene(LoginParent);
     	
+    	
+    	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+    	
+    	window.setScene(LoginScene);
+    	window.show();
     }
     
 }
