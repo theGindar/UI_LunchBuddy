@@ -54,7 +54,7 @@ public class ProfilBearbeitenController {
 	und zur normalen ProfilScene weitergeleitet wird **/
 	public void ProfilBearbeitungSpeichern(ActionEvent event) throws IOException {
 		
-		Parent ProfilBearbeitenParent = FXMLLoader.load(getClass().getResource("Profil.fxml"));
+		Parent ProfilBearbeitenParent = FXMLLoader.load(getClass().getResource("/profil/Profil.fxml"));
 		Scene ProfilBearbeitenScene = new Scene(ProfilBearbeitenParent);
 		
 		

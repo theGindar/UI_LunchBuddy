@@ -53,7 +53,7 @@ public class ProfilErstellenController {
 	//und zum SwipeScreen weitergeleitet wird **/
 public void ProfilErstellenSpeichern(ActionEvent event) throws IOException {
 		
-		Parent ProfilErstellenParent = FXMLLoader.load(getClass().getResource("Swipe.fxml"));
+		Parent ProfilErstellenParent = FXMLLoader.load(getClass().getResource("/swipeScreen/Swipe.fxml"));
 		Scene ProfilErstellenScene = new Scene(ProfilErstellenParent);
 		
 		
