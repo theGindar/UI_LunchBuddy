@@ -23,6 +23,10 @@ public class Main extends Application {
 			primaryStage.getIcons().add(new Image("/application/donut.png"));
 			primaryStage.setTitle("Lunchbuddy");
 			
+			primaryStage.setMinHeight(550);
+			primaryStage.setMinWidth(300);
+			
+			
 			
 
 		} catch (Exception e) {
