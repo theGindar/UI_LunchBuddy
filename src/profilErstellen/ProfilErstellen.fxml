@@ -70,12 +70,11 @@
       </RadioButton>
       <RadioButton layoutX="209.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="66.0" text="Nein" toggleGroup="$partnerErstellen" AnchorPane.rightAnchor="25.0" />
       <PasswordField fx:id="PasswordErstellen" layoutX="131.0" layoutY="215.0" prefHeight="25.0" prefWidth="162.0" AnchorPane.rightAnchor="20.0" />
-      <Button fx:id="btnChangeImage" layoutX="20.0" layoutY="76.0" mnemonicParsing="false" onAction="#ProfilBildAendern" prefHeight="18.0" prefWidth="67.0" text="Change" AnchorPane.bottomAnchor="451.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="219.0" AnchorPane.topAnchor="76.0">
+      <Button fx:id="btnChangeImage" layoutX="20.0" layoutY="76.0" mnemonicParsing="false" onAction="#ProfilBildAendern" prefHeight="18.0" prefWidth="67.0" text="ändern" AnchorPane.bottomAnchor="451.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="219.0" AnchorPane.topAnchor="76.0">
          <font>
             <Font size="10.0" />
          </font>
       </Button>
-      <Circle fx:id="kreis" fill="DODGERBLUE" layoutX="155.0" layoutY="76.0" onMouseClicked="#initialize" radius="62.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="412.0" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="14.0" />
       <ToolBar layoutX="5.0" prefHeight="40.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <items>
             <Button fx:id="btnErstellenZurueck" mnemonicParsing="false" onAction="#ProfilErstellenZurueck">
@@ -89,6 +88,7 @@
             </Button>
          </items>
       </ToolBar>
+      <Circle fx:id="kreis" fill="DODGERBLUE" layoutX="155.0" layoutY="76.0" onMouseClicked="#initialize" radius="62.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="412.0" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="14.0" />
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />
