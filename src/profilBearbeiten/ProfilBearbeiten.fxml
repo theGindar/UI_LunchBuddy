@@ -9,6 +9,7 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -69,21 +70,25 @@
 		</RadioButton>
 		<RadioButton fx:id="ButtonPartnersuche" layoutX="222.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="66.0" text="Nein" toggleGroup="$partnerJa" AnchorPane.rightAnchor="25.0" />
 		<PasswordField fx:id="Password" layoutX="131.0" layoutY="215.0" prefHeight="25.0" prefWidth="162.0" AnchorPane.rightAnchor="20.0" />
-		<Button fx:id="btnZurueckk" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#ProfilZurueckk" prefHeight="21.0" prefWidth="36.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
-			<graphic>
-				<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-					<image>
-						<Image url="@/application/zurueckPfeil.png" />
-					</image>
-				</ImageView>
-			</graphic>
-		</Button>
       <Button fx:id="btnChangeImageB" layoutX="23.0" layoutY="76.0" mnemonicParsing="false" onAction="#ProfilBildAendern" prefHeight="18.0" prefWidth="67.0" text="Change" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="76.0">
          <font>
             <Font size="10.0" />
          </font>
       </Button>
       <Circle fx:id="kreis" fill="DODGERBLUE" layoutX="165.0" layoutY="86.0" onMouseClicked="#initialize" radius="62.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="412.0" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="14.0" />
+      <ToolBar layoutX="5.0" prefHeight="40.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+      		<Button fx:id="btnZurueckk" mnemonicParsing="false" onAction="#ProfilZurueckk" prefHeight="21.0" prefWidth="36.0">
+      			<graphic>
+      				<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+      					<image>
+      						<Image url="@/application/zurueckPfeil.png" />
+      					</image>
+      				</ImageView>
+      			</graphic>
+      		</Button>
+        </items>
+      </ToolBar>
 	</children>
 	<cursor>
 		<Cursor fx:constant="DEFAULT" />
