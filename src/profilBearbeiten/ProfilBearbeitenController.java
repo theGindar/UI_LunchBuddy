@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.imageio.ImageIO;
 
@@ -20,6 +22,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
@@ -62,6 +65,8 @@ public class ProfilBearbeitenController extends Application implements Initializ
 	private PasswordField Password;
 	@FXML
 	private Circle kreis;
+    @FXML
+    private Label buttonpwfalschh;
 	
 	private FileChooser fileChooser;
 	private File filepath;
@@ -125,6 +130,10 @@ public class ProfilBearbeitenController extends Application implements Initializ
 	/**Wenn man in der ProfilbearbeitenScene den Speicher Button drückt 
 	und zur normalen ProfilScene weitergeleitet wird **/
 	public void ProfilBearbeitungSpeichern(ActionEvent event) throws IOException {
+		String pattern = "[\\w\\.äöü-]+@[\\w\\.äöü-]+\\.(de|com|net|org)";
+		Pattern pt = Pattern.compile(pattern);
+		Matcher m = pt.matcher(txtMail.getText());
+		if(m.find()) {
 		
 		Parent ProfilBearbeitenParent = FXMLLoader.load(getClass().getResource("/profil/Profil.fxml"));
 		Scene ProfilBearbeitenScene = new Scene(ProfilBearbeitenParent);
@@ -134,6 +143,11 @@ public class ProfilBearbeitenController extends Application implements Initializ
 		
 		window.setScene(ProfilBearbeitenScene);
 		window.show();
+	}else {
+		buttonpwfalschh.setText("Bitte eine korrekte E-Mail eingeben");
+		buttonpwfalschh.setTextFill(Color.web("#FF0000"));
+		
+	}
 	}
 	
 	/**
