@@ -10,47 +10,44 @@ import java.io.IOException;
 
 public class StudentListViewCell extends ListCell<Student> {
 
-    @FXML
-    private Label label1;
+	@FXML
+	private Label label1;
 
-    @FXML
-    private Label label2;
+	@FXML
+	private Label label2;
 
-    
-    @FXML
-    private GridPane gridPane;
+	@FXML
+	private GridPane gridPane;
 
-    private FXMLLoader mLLoader;
+	private FXMLLoader mLLoader;
 
-    @Override
-    protected void updateItem(Student student, boolean empty) {
-        super.updateItem(student, empty);
+	@Override
+	protected void updateItem(Student student, boolean empty) {
+		super.updateItem(student, empty);
 
-        if(empty || student == null) {
+		if (empty || student == null) {
 
-            setText(null);
-            setGraphic(null);
+			setText(null);
+			setGraphic(null);
 
-        } else {
-            if (mLLoader == null) {
-                mLLoader = new FXMLLoader(getClass().getResource("ListCell.fxml"));
-                mLLoader.setController(this);
+		} else {
+			if (mLLoader == null) {
+				mLLoader = new FXMLLoader(getClass().getResource("ListCell.fxml"));
+				mLLoader.setController(this);
 
-                try {
-                    mLLoader.load();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+				try {
+					mLLoader.load();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 
-            }
-            
-            label2.setText(student.getName());
+			}
 
-            
+			label2.setText(student.getName());
 
-            setText(null);
-            setGraphic(gridPane);
-        }
+			setText(null);
+			setGraphic(gridPane);
+		}
 
-    }
+	}
 }

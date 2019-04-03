@@ -21,22 +21,21 @@ package chatlist;
 
 import javafx.scene.image.Image;
 
-
 public class Student {
 
-    private Image image;
-    private String name;
+	private Image image;
+	private String name;
 
-    public Student(String name) {
-    	this.name = name;
-    }
-    public String getName() {
-        return name;
-    }
+	public Student(String name) {
+		this.name = name;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public String getName() {
+		return name;
+	}
 
+	public void setName(String name) {
+		this.name = name;
+	}
 
 }
