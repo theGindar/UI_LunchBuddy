@@ -10,26 +10,27 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class SwipeController {
 
 	@FXML
-	private Button btnProfil;
-	@FXML
-	private Button btnEinstellungen;
-	@FXML 
-	private ImageView ZuEinstellungen;
+    private AnchorPane hintergrundSwipe;
+
+    @FXML
+    private Button btnEinstellungen;
+
+    @FXML
+    private Button btnProfil;
+
+    @FXML
+    private ImageView imgProfil;
+
+    @FXML
+    private Button ZumChatBtn;
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
 	
 	/**
 	 * Wenn man auf der SwipeScene den Settings-Button drückt und zum
@@ -77,4 +78,6 @@ public class SwipeController {
 		window.setScene(ZumChatScene);
 		window.show();
 	}
+	
+	
 }

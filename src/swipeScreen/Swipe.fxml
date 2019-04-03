@@ -25,5 +25,6 @@
 				</ImageView>
 			</graphic>
 		</Button>
+		<Button fx:id="ZumChatBtn" layoutX="74.0" layoutY="444.0" mnemonicParsing="false" onAction="#ZumChat" prefHeight="25.0" prefWidth="152.0" text="Zum Chat TEST" AnchorPane.bottomAnchor="81.0" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="74.0" AnchorPane.topAnchor="444.0" />
 	</children>
 </AnchorPane>
