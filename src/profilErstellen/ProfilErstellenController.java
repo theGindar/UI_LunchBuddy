@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.imageio.ImageIO;
 
@@ -21,6 +23,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
@@ -64,6 +67,8 @@ public class ProfilErstellenController extends Application implements Initializa
 	private PasswordField PasswordErstellen;
 	@FXML
 	private Circle kreis;
+    @FXML
+	private Label LabelPwFalsch;
 	
 	private FileChooser fileChooser;
 	private File filepath;
@@ -128,6 +133,11 @@ public class ProfilErstellenController extends Application implements Initializa
 	/// **Wenn man in der ProfilErstellenScreen den Erstellen-Button drückt
 	// und zum SwipeScreen weitergeleitet wird **/
 	public void ProfilErstellenSpeichern(ActionEvent event) throws IOException {
+		
+		String pattern = "[\\w\\.äöü-]+@[\\w\\.äöü-]+\\.(de|com|net|org)";
+		Pattern pt = Pattern.compile(pattern);
+		Matcher m = pt.matcher(txtErstellenMail.getText());
+		if(m.find()) {
 
 		Parent ProfilErstellenParent = FXMLLoader.load(getClass().getResource("/swipeScreen/Swipe.fxml"));
 		Scene ProfilErstellenScene = new Scene(ProfilErstellenParent);
@@ -135,7 +145,12 @@ public class ProfilErstellenController extends Application implements Initializa
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
 		window.setScene(ProfilErstellenScene);
-		window.show();
+		window.show();} 
+		else {
+			LabelPwFalsch.setText("Bitte eine korrekte E-Mail eingeben");
+			LabelPwFalsch.setTextFill(Color.web("#FF0000"));
+			
+		}
 	}
 
 	/**

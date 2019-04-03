@@ -24,7 +24,7 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtErstellenBeschreibung" layoutX="19.0" layoutY="379.0" prefHeight="116.0" prefWidth="260.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <TextArea fx:id="txtErstellenBeschreibung" layoutX="19.0" layoutY="379.0" prefHeight="90.0" prefWidth="260.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
       <TextField fx:id="txtErstellenMail" layoutX="130.0" layoutY="182.0" prefHeight="25.0" prefWidth="162.0" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="20.0" />
       <Label layoutX="20.0" layoutY="184.0" prefHeight="21.0" prefWidth="111.0" text="E-Mail*:" AnchorPane.leftAnchor="20.0">
          <font>
@@ -89,6 +89,7 @@
          </items>
       </ToolBar>
       <Circle fx:id="kreis" fill="DODGERBLUE" layoutX="155.0" layoutY="76.0" onMouseClicked="#initialize" radius="62.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="412.0" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="14.0" />
+      <Label fx:id="LabelPwFalsch" contentDisplay="BOTTOM" layoutX="-2.0" layoutY="478.0" prefHeight="17.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />
