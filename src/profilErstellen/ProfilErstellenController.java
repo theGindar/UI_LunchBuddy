@@ -88,6 +88,7 @@ public class ProfilErstellenController extends Application implements Initializa
 				this.txtErstellenBeschreibung.textProperty().isEmpty()));
 		
 	}
+	
 
 	//Profilbild Ändern
 	

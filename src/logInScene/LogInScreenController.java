@@ -1,6 +1,8 @@
 package logInScene;
 
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.omg.CORBA.INITIALIZE;
 
@@ -12,10 +14,12 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class LogInScreenController {
@@ -32,6 +36,8 @@ public class LogInScreenController {
 	private AnchorPane hintergrundLogIn;
 	@FXML
 	private PasswordField PasswordLogIn;
+	@FXML
+	private Label PwFalsch;
 
 	// Man kann sich nur Anmelden, wenn man seine E-Mail und sein Password angegeben hat 
 	@FXML
@@ -39,6 +45,7 @@ public class LogInScreenController {
 		this.btnLogInAnmelden.disableProperty().bind(
 			Bindings.or(this.txtLogINMail.textProperty().isEmpty(),
 				         this.PasswordLogIn.textProperty().isEmpty()));
+		
 	}
 
 	/**
@@ -46,7 +53,12 @@ public class LogInScreenController {
 	 * Haupt-,SwipeScreen weitergeleitet wird
 	 **/
 	public void ProfilAnmelden(ActionEvent event) throws IOException {
-
+		String pattern = "[\\w\\.הצü-]+@[\\w\\.הצü-]+\\.(de|com|net|org)";
+		Pattern pt = Pattern.compile(pattern);
+		Matcher m = pt.matcher(txtLogINMail.getText());
+		if(m.find()) {
+			
+		
 		Parent ProfilAnmeldenParent = FXMLLoader.load(getClass().getResource("/swipeScreen/Swipe.fxml")); // 
 		Scene ProfilAnmeldenScene = new Scene(ProfilAnmeldenParent);
 
@@ -54,6 +66,11 @@ public class LogInScreenController {
 
 		window.setScene(ProfilAnmeldenScene);
 		window.show();
+		}else {
+			PwFalsch.setText("Bitte eine korrekte E-Mail eingeben");
+			PwFalsch.setTextFill(Color.web("#FF0000"));
+			
+		}
 	}
 
 	/**

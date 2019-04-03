@@ -9,12 +9,19 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ToggleButton;
 import javafx.stage.Stage;
 
 public class EinstellungenController {
+	boolean sound = false;
+	boolean vibration = false;
 
 	@FXML
 	private Button logoutbtn;
+	@FXML
+	private ToggleButton soundbtn;
+	@FXML
+	private ToggleButton vibrationbtn;
 
 	/**
 	 * Wenn man in der EinloggSceene den Zurück-Button drückt und zum
@@ -30,6 +37,29 @@ public class EinstellungenController {
 		window.setScene(SwipeScene);
 		window.show();
 	}
+	@FXML
+	public void SoundAn() {
+		
+		if(!sound) {
+			soundbtn.setText("Deaktivieren");
+			sound = true;
+		}else {
+			soundbtn.setText("Aktivieren");
+			sound = false;
+		}
+				
+				
+	}
+public void VibrationAn() {
+		
+		if(!vibration) {
+			vibrationbtn.setText("Deaktivieren");
+			vibration = true;
+		}else {
+			vibrationbtn.setText("Aktivieren");
+			vibration = false;
+		}
+}
 
 	/**
 	 * Weiterleitung zur Startseite
