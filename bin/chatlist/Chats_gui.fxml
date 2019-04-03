@@ -12,7 +12,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chatlist.ControllerChatlist">
    <children>
       <ListView fx:id="listviewchatauflistung" layoutX="3.0" layoutY="69.0" prefHeight="460.0" prefWidth="346.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <ToolBar prefHeight="40.0" prefWidth="300.0">
+      <ToolBar prefHeight="40.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
             <Button fx:id="chatlistzurueckbtn" mnemonicParsing="false" onAction="#EinstellungenZurueckkk">
                <graphic>
