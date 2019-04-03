@@ -82,7 +82,7 @@
       		</Button>
         </items>
       </ToolBar>
-      <Circle fx:id="kreis" fill="DODGERBLUE" layoutX="175.0" layoutY="96.0" onMouseClicked="#initialize" radius="62.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="412.0" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="14.0" />
+      <Circle fx:id="kreis" fill="DODGERBLUE" layoutX="175.0" layoutY="96.0" radius="62.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="412.0" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="14.0" />
 	</children>
 	<cursor>
 		<Cursor fx:constant="DEFAULT" />
