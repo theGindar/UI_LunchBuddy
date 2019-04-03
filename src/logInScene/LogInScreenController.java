@@ -14,14 +14,15 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class LogInScreenController {
-	String st;
 
 	@FXML
 	private TextField txtLogINMail;
@@ -35,6 +36,8 @@ public class LogInScreenController {
 	private AnchorPane hintergrundLogIn;
 	@FXML
 	private PasswordField PasswordLogIn;
+	@FXML
+	private Label PwFalsch;
 
 	// Man kann sich nur Anmelden, wenn man seine E-Mail und sein Password angegeben hat 
 	@FXML
@@ -64,6 +67,8 @@ public class LogInScreenController {
 		window.setScene(ProfilAnmeldenScene);
 		window.show();
 		}else {
+			PwFalsch.setText("Bitte korrektes Password eingeben");
+			PwFalsch.setTextFill(Color.web("#FF0000"));
 			
 		}
 	}
