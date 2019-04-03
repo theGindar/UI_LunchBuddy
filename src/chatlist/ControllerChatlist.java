@@ -32,7 +32,8 @@ public class ControllerChatlist implements Initializable {
 	public ControllerChatlist() {
 
 		studentObservableList = FXCollections.observableArrayList();
-		studentObservableList.addAll(new Student("John Doe"), new Student("Jane Doe"), new Student("Donte Dunigan"));
+		studentObservableList.addAll(new Student("Max Mustermann"), new Student("Hans Jürgen"),
+				new Student("Hildegard Müller"));
 
 	}
 
