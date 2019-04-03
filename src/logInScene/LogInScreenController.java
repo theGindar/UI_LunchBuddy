@@ -67,7 +67,7 @@ public class LogInScreenController {
 		window.setScene(ProfilAnmeldenScene);
 		window.show();
 		}else {
-			PwFalsch.setText("Bitte korrektes Password eingeben");
+			PwFalsch.setText("Bitte eine korrekte E-Mail eingeben");
 			PwFalsch.setTextFill(Color.web("#FF0000"));
 			
 		}
