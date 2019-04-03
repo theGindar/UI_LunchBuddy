@@ -58,7 +58,13 @@ public class ControllerChatlist implements Initializable {
 		window.setScene(SwipeScene);
 		window.show();
 	}
+	
+	
 
+	/**
+	 * Wenn man in der Chatlist-Scene auf einen Chat drückt und zum Chat
+	 * weitergeleitet wird
+	 **/
 	public void ZuEinemChat(ActionEvent event) throws IOException {
 
 		Parent ChatParent = FXMLLoader.load(getClass().getResource("/chat/ChatGUI.fxml"));
