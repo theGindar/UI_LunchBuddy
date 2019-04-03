@@ -1,6 +1,8 @@
 package logInScene;
 
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.omg.CORBA.INITIALIZE;
 
@@ -19,6 +21,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class LogInScreenController {
+	String st;
 
 	@FXML
 	private TextField txtLogINMail;
@@ -39,6 +42,7 @@ public class LogInScreenController {
 		this.btnLogInAnmelden.disableProperty().bind(
 			Bindings.or(this.txtLogINMail.textProperty().isEmpty(),
 				         this.PasswordLogIn.textProperty().isEmpty()));
+		
 	}
 
 	/**
@@ -46,7 +50,12 @@ public class LogInScreenController {
 	 * Haupt-,SwipeScreen weitergeleitet wird
 	 **/
 	public void ProfilAnmelden(ActionEvent event) throws IOException {
-
+		String pattern = "[\\w\\.הצü-]+@[\\w\\.הצü-]+\\.(de|com|net|org)";
+		Pattern pt = Pattern.compile(pattern);
+		Matcher m = pt.matcher(txtLogINMail.getText());
+		if(m.find()) {
+			
+		
 		Parent ProfilAnmeldenParent = FXMLLoader.load(getClass().getResource("/swipeScreen/Swipe.fxml")); // 
 		Scene ProfilAnmeldenScene = new Scene(ProfilAnmeldenParent);
 
@@ -54,6 +63,9 @@ public class LogInScreenController {
 
 		window.setScene(ProfilAnmeldenScene);
 		window.show();
+		}else {
+			
+		}
 	}
 
 	/**
