@@ -17,14 +17,14 @@
 
 <AnchorPane fx:id="hintergrund" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="profil.ProfilController">
 	<children>
-		<TextField fx:id="txtProfilName" disable="true" layoutX="130.0" layoutY="150.0" prefHeight="25.0" prefWidth="164.0" promptText="Max Mustermann" AnchorPane.rightAnchor="20.0" />
+		<TextField fx:id="txtProfilName" disable="true" layoutX="130.0" layoutY="150.0" prefHeight="25.0" prefWidth="164.0" promptText="Max Mustermann" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="20.0" />
 		<Label layoutX="20.0" layoutY="152.0" prefHeight="21.0" prefWidth="85.0" text="Name:">
 			<font>
 				<Font size="15.0" />
 			</font>
 		</Label>
 		<TextArea fx:id="txtProfilBeschreibung" disable="true" layoutX="19.0" layoutY="379.00" prefHeight="116.0" prefWidth="260.0" promptText="Ich mag Züge." AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
-		<TextField fx:id="txtProfilMail" disable="true" layoutX="130.0" layoutY="182.0" prefHeight="25.0" prefWidth="164.0" promptText="Max@Mustermann.de" AnchorPane.rightAnchor="20.0" />
+		<TextField fx:id="txtProfilMail" disable="true" layoutX="130.0" layoutY="182.0" prefHeight="25.0" prefWidth="164.0" promptText="Max@Mustermann.de" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="20.0" />
 		<Label layoutX="20.0" layoutY="184.0" prefHeight="21.0" prefWidth="111.0" text="E-Mail:">
 			<font>
 				<Font size="15.0" />
@@ -35,7 +35,7 @@
 				<Font size="15.0" />
 			</font>
 		</Label>
-		<TextField fx:id="txtProfilStudiengang" disable="true" layoutX="130.0" layoutY="247.0" prefHeight="25.0" prefWidth="164.0" promptText="Wirtschaftsinformatik" AnchorPane.rightAnchor="20.0" />
+		<TextField fx:id="txtProfilStudiengang" disable="true" layoutX="130.0" layoutY="247.0" prefHeight="25.0" prefWidth="164.0" promptText="Wirtschaftsinformatik" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="20.0" />
 		<Label layoutX="20.0" layoutY="249.0" prefHeight="21.0" prefWidth="99.0" text="Studiengang:">
 			<font>
 				<Font size="15.0" />
@@ -61,14 +61,14 @@
 				<Font size="16.0" />
 			</font>
 		</Button>
-		<RadioButton fx:id="ButtonProfilPartnersuche" disable="true" layoutX="150.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="66.0" selected="true" text="Ja" AnchorPane.rightAnchor="84.0">
+		<RadioButton fx:id="ButtonProfilPartnersuche" disable="true" layoutX="150.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="66.0" selected="true" text="Ja" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="84.0">
 			<toggleGroup>
 				<ToggleGroup fx:id="partner" />
 			</toggleGroup>
 		</RadioButton>
-		<RadioButton fx:id="ButtonProfilPartnersuche" disable="true" layoutX="220.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="92.0" text="Nein" toggleGroup="$partner" AnchorPane.rightAnchor="-12.0" />
-		<PasswordField fx:id="ProfilPassword" disable="true" layoutX="130.0" layoutY="215.0" prefHeight="25.0" prefWidth="164.0" text="88888888" AnchorPane.rightAnchor="20.0" />
-		<TextField fx:id="txtProfilAlter" disable="true" layoutX="130.0" layoutY="280.0" prefHeight="25.0" prefWidth="164.0" promptText="20" AnchorPane.rightAnchor="20.0" />
+		<RadioButton fx:id="ButtonProfilPartnersuche" disable="true" layoutX="213.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="Nein" toggleGroup="$partner" AnchorPane.leftAnchor="213.0" AnchorPane.rightAnchor="-12.0" />
+		<PasswordField fx:id="ProfilPassword" disable="true" layoutX="130.0" layoutY="215.0" prefHeight="25.0" prefWidth="164.0" text="88888888" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="20.0" />
+		<TextField fx:id="txtProfilAlter" disable="true" layoutX="130.0" layoutY="280.0" prefHeight="25.0" prefWidth="164.0" promptText="20" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="20.0" />
       <ToolBar layoutX="5.0" prefHeight="40.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
       		<Button fx:id="btnZurueck" mnemonicParsing="false" onAction="#ProfilZurueck" prefHeight="20.0" prefWidth="20.0">
