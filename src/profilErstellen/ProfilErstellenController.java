@@ -49,8 +49,6 @@ public class ProfilErstellenController extends Application implements Initializa
 	@FXML
 	private DatePicker txtErstellenAlter;
 	@FXML
-	private ImageView PictureErstellen;
-	@FXML
 	private RadioButton ButtonErstellenPartnersuche;
 	@FXML
 	private Button btnErstellenSpeichern;

@@ -75,7 +75,7 @@
             <Font size="10.0" />
          </font>
       </Button>
-      <Circle fx:id="kreis" fill="DODGERBLUE" layoutX="165.0" layoutY="86.0" onMouseClicked="#initialize" radius="62.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="412.0" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="14.0" />
+      <Circle fx:id="kreis" fill="DODGERBLUE" layoutX="165.0" layoutY="86.0" radius="62.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="412.0" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="14.0" />
       <ToolBar layoutX="5.0" prefHeight="40.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
       		<Button fx:id="btnZurueckk" mnemonicParsing="false" onAction="#ProfilZurueckk" prefHeight="21.0" prefWidth="36.0">
