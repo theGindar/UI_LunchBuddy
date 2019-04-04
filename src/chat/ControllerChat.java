@@ -22,7 +22,7 @@ public class ControllerChat implements Initializable {
 		//chatListView.getItems().add("asdfasfda");
 		messageObservableList = FXCollections.observableArrayList();
 		messageObservableList.addAll(
-				new ChatMessage("blablabla", true),
+				new ChatMessage("Guten Tag", true),
 				new ChatMessage(model.getName(), false));
 	}
 	
