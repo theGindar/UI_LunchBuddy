@@ -2,9 +2,9 @@
 
 
 .iconbtn{
-	-fx-border-radius: 50%;
+	-fx-border-radius: 75%;
 	-fx-border-color: #4CAF50; /* Green */
-	-fx-background-radius: 50%;
+	-fx-background-radius: 75%;
 }
 
 .normalbtn{
