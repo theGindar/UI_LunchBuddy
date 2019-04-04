@@ -36,7 +36,9 @@
 					</graphic>
 				</Button>
             <HBox prefHeight="0.0" prefWidth="200.0" />
-				<Button fx:id="btnEinstellungen" mnemonicParsing="false" onAction="#zumEinstellungen" prefHeight="37.0" prefWidth="30.0" styleClass="iconbtn" stylesheets="@../application/application.css">
+			</items>
+		</ToolBar>
+				<Button fx:id="btnEinstellungen" mnemonicParsing="false" onAction="#zumEinstellungen" prefHeight="37.0" prefWidth="30.0" styleClass="iconbtn" stylesheets="@../application/application.css" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
 					<graphic>
 						<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
 							<image>
@@ -45,8 +47,6 @@
 						</ImageView>
 					</graphic>
 				</Button>
-			</items>
-		</ToolBar>
       <HBox alignment="CENTER" layoutX="47.0" layoutY="299.0" prefHeight="74.0" prefWidth="200.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
          <children>
             <Button fx:id="btnSwipeLinks" mnemonicParsing="false" onAction="#nextUser" prefHeight="70.0" prefWidth="70.0" styleClass="iconbtn" stylesheets="@../application/application.css">
