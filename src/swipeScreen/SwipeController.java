@@ -25,7 +25,8 @@ import javafx.stage.Stage;
 import model.Model;
 
 public class SwipeController extends Application implements Initializable {
-
+	int i = 0;
+	
 	@FXML
 	private AnchorPane hintergrundSwipe;
 
@@ -43,18 +44,44 @@ public class SwipeController extends Application implements Initializable {
 
 	@FXML
 	private Button btnProfil;
-
+	@FXML
+	private ImageView imgRechts;
 	@FXML
 	private ImageView imgProfil;
 
 	@FXML
 	private Button btnEinstellungen;
+	
+	
+	public void nextUser() {
+		boolean b = true; 
+		String[] profile = new String[10] ;
+		profile[0] =	"application\\SwipePicture1.jpg";
+		profile[1] =	"application\\SwipePicture2.jpg";
+		profile[2] =	"application\\SwipePicture3.jpg";
+		profile[3] =	"application\\SwipePicture4.jpg";
+		profile[4] =	"application\\SwipePicture5.jpg";
+		profile[5] =	"application\\SwipePicture6.jpg";
+		profile[6] =	"application\\SwipePicture7.jpg";
+		profile[7] =	"application\\SwipePicture8.jpg";
+		profile[8] =	"application\\SwipePicture9.jpg";
+		profile[9] =	"application\\SwipePicture10.jpg";
+		
+		if(b!=false) {
+			Image img = new Image(profile[(int) (Math.random()*profile.length)], false);
+			kreis.setFill(new ImagePattern(img));
+		}
+	
+	}
+	
+	
+						
 
 	// Kreis erzeugen und Bild darin speichern
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 		kreis.setStroke(Color.SEAGREEN);
-		Image im = new Image("application\\SwipePicture.jpg", false);
+		Image im = new Image("application\\SwipePicture1.jpg", false);
 		kreis.setFill(new ImagePattern(im));
 		kreis.setEffect(new DropShadow(+25d, 0d, +2d, Color.DARKSEAGREEN));
 	}
