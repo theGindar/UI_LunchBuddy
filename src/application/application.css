@@ -29,3 +29,7 @@
 .grid{
 	-fx-background-color: #899bff;
 }
+
+.background {
+    -fx-background-image: url("bg.jpg");
+}
