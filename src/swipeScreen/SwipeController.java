@@ -28,7 +28,16 @@ public class SwipeController extends Application implements Initializable {
 	private AnchorPane hintergrundSwipe;
 
 	@FXML
-	private Button btnEinstellungen;
+	private Button ZumChatBtn;
+
+	@FXML
+	private Button btnSwipeLinks;
+
+	@FXML
+	private Button btnSwipeRechts;
+
+	@FXML
+	private Circle kreis;
 
 	@FXML
 	private Button btnProfil;
@@ -37,9 +46,7 @@ public class SwipeController extends Application implements Initializable {
 	private ImageView imgProfil;
 
 	@FXML
-	private Button ZumChatBtn;
-	@FXML
-	private Circle kreis;
+	private Button btnEinstellungen;
 
 	// Kreis erzeugen und Bild darin speichern
 	@Override
