@@ -1,12 +1,13 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 
-
+/* Design von Navigations Buttons */
 .iconbtn{
 	-fx-border-radius: 75%;
-	-fx-border-color: #4CAF50; /* Green */
+	-fx-border-color: #4CAF50;
 	-fx-background-radius: 75%;
 }
 
+/* Design vom normalen Button */
 .normalbtn{
 	-fx-border-radius: 12px;
 	-fx-background-color: white;
@@ -15,6 +16,7 @@
 	-fx-border-color: black;
 }
 
+/* Wenn man mit Maus über Button fährt */
 .normalbtn:hover{
 	-fx-border-radius: 12px;
 	-fx-background-color: #555555;
@@ -23,3 +25,7 @@
 }
 
 
+/* Nachricht im Chat */
+.grid{
+	-fx-background-color: 6082f2;
+}

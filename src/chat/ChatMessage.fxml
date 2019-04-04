@@ -5,13 +5,13 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane fx:id="gridPane" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #4286f4;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane fx:id="gridPane" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #4286f4;" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
     
     <rowConstraints>
         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
-        <Label fx:id="label1" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="30.0" text="Label" GridPane.columnIndex="1" />
+        <Label fx:id="label1" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="30.0" styleClass="grid" text="Label" GridPane.columnIndex="1" />
     </children>
    <columnConstraints>
       <ColumnConstraints />
