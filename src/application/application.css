@@ -10,6 +10,7 @@
 .normalbtn{
 	-fx-border-radius: 12px;
 	-fx-background-color: white;
+	-fx-background-radius: 12px;
 	-fx-color-label-visible: black;
 	-fx-border-color: black;
 }
