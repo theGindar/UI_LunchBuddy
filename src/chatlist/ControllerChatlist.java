@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import chat.ChatListViewCell;
-import chat.ChatMessage;
 import chat.ControllerChat;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
