@@ -24,8 +24,9 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtErstellenBeschreibung" layoutX="19.0" layoutY="379.0" prefHeight="90.0" prefWidth="260.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
       <TextField fx:id="txtErstellenMail" layoutX="130.0" layoutY="182.0" prefHeight="25.0" prefWidth="162.0" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="20.0" />
+      <PasswordField fx:id="PasswordErstellen" layoutX="131.0" layoutY="215.0" prefHeight="25.0" prefWidth="162.0" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="20.0" />
+      <TextField fx:id="txtErstellenStudiengang" layoutX="130.0" layoutY="247.0" prefHeight="25.0" prefWidth="162.0" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="20.0" />
       <Label layoutX="20.0" layoutY="184.0" prefHeight="21.0" prefWidth="111.0" text="E-Mail*:" AnchorPane.leftAnchor="20.0">
          <font>
             <Font size="15.0" />
@@ -36,7 +37,8 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="txtErstellenStudiengang" layoutX="130.0" layoutY="247.0" prefHeight="25.0" prefWidth="162.0" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="20.0" />
+      <DatePicker fx:id="txtErstellenAlter" layoutX="130.0" layoutY="280.0" prefHeight="25.0" prefWidth="162.0" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="20.0" />
+      <TextArea fx:id="txtErstellenBeschreibung" layoutX="19.0" layoutY="379.0" prefHeight="90.0" prefWidth="260.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
       <Label layoutX="20.0" layoutY="249.0" prefHeight="21.0" prefWidth="99.0" text="Studiengang:" AnchorPane.leftAnchor="20.0">
          <font>
             <Font size="15.0" />
@@ -62,14 +64,12 @@
             <Font size="16.0" />
          </font>
       </Button>
-      <DatePicker fx:id="txtErstellenAlter" layoutX="130.0" layoutY="280.0" prefHeight="25.0" prefWidth="162.0" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="20.0" />
       <RadioButton layoutX="140.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" selected="true" text="Ja" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="93.0">
          <toggleGroup>
             <ToggleGroup fx:id="partnerErstellen" />
          </toggleGroup>
       </RadioButton>
       <RadioButton layoutX="208.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Nein" toggleGroup="$partnerErstellen" AnchorPane.leftAnchor="208.0" AnchorPane.rightAnchor="25.0" />
-      <PasswordField fx:id="PasswordErstellen" layoutX="131.0" layoutY="215.0" prefHeight="25.0" prefWidth="162.0" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="20.0" />
       <Button fx:id="btnChangeImage" layoutX="20.0" layoutY="76.0" mnemonicParsing="false" onAction="#ProfilBildAendern" prefHeight="18.0" prefWidth="67.0" text="ändern" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="76.0">
          <font>
             <Font size="10.0" />
