@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="hintergrund" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="profilBearbeiten.ProfilBearbeitenController">
+	<children>
+		<TextField fx:id="txtName" layoutX="130.0" layoutY="150.0" prefHeight="25.0" prefWidth="162.0" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="20.0" />
+		<TextField fx:id="txtMail" layoutX="130.0" layoutY="182.0" prefHeight="25.0" prefWidth="162.0" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="20.0" />
+		<PasswordField fx:id="Password" layoutX="131.0" layoutY="215.0" prefHeight="25.0" prefWidth="162.0" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="20.0" />
+		<Label layoutX="20.0" layoutY="152.0" prefHeight="21.0" prefWidth="85.0" text="Name*:" AnchorPane.leftAnchor="20.0">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<TextField fx:id="txtStudiengang" layoutX="130.0" layoutY="247.0" prefHeight="25.0" prefWidth="162.0" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="20.0" />
+		<DatePicker fx:id="txtAlter" layoutX="130.0" layoutY="280.0" prefHeight="25.0" prefWidth="162.0" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="20.0" />
+		<TextArea fx:id="txtBeschreibung" layoutX="19.0" layoutY="379.0" prefHeight="90.0" prefWidth="260.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+		<Label layoutX="20.0" layoutY="184.0" prefHeight="21.0" prefWidth="111.0" text="E-Mail*:" AnchorPane.leftAnchor="20.0">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<Label layoutX="20.0" layoutY="217.0" prefHeight="21.0" prefWidth="85.0" text="Passwort*:" AnchorPane.leftAnchor="20.0">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<Label layoutX="20.0" layoutY="249.0" prefHeight="21.0" prefWidth="99.0" text="Studiengang:" AnchorPane.leftAnchor="20.0">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<Label layoutX="20.0" layoutY="282.0" prefHeight="21.0" prefWidth="99.0" text="Geb. Datum:" AnchorPane.leftAnchor="20.0">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<Label layoutX="20.0" layoutY="315.0" prefHeight="21.0" prefWidth="99.0" text="Partnersuche*:" AnchorPane.leftAnchor="20.0">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<Label layoutX="20.0" layoutY="347.0" prefHeight="21.0" prefWidth="111.0" text="Beschreibung*:" AnchorPane.leftAnchor="20.0">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<Button fx:id="btnSpeichern" layoutX="78.0" layoutY="503.0" mnemonicParsing="false" onAction="#ProfilBearbeitungSpeichern" prefHeight="35.0" prefWidth="141.0" styleClass="normalbtn" stylesheets="@../application/application.css" text="Speichern" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+			<font>
+				<Font size="16.0" />
+			</font>
+		</Button>
+		<RadioButton fx:id="ButtonPartnersuche" layoutX="152.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" selected="true" text="Ja" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="93.0">
+			<toggleGroup>
+				<ToggleGroup fx:id="partnerJa" />
+			</toggleGroup>
+		</RadioButton>
+		<RadioButton fx:id="ButtonPartnersuche" layoutX="208.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Nein" toggleGroup="$partnerJa" AnchorPane.leftAnchor="208.0" AnchorPane.rightAnchor="25.0" />
+      <Button fx:id="btnChangeImageB" layoutX="17.0" layoutY="99.0" mnemonicParsing="false" onAction="#ProfilBildAendern" prefHeight="18.0" prefWidth="67.0" styleClass="normalbtn" stylesheets="@../application/application.css" text="ändern" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="99.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <ToolBar layoutX="5.0" prefHeight="40.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+      		<Button fx:id="btnZurueck" mnemonicParsing="false" onAction="#ProfilZurueckk" prefHeight="21.0" prefWidth="36.0" styleClass="iconbtn" stylesheets="@../application/application.css">
+      			<graphic>
+      				<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+      					<image>
+      						<Image url="@/application/zurueckPfeil.png" />
+      					</image>
+      				</ImageView>
+      			</graphic>
+      		</Button>
+        </items>
+      </ToolBar>
+      <HBox alignment="CENTER" layoutX="55.0" layoutY="14.0" prefHeight="124.0" prefWidth="200.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <Circle fx:id="kreis" fill="DODGERBLUE" radius="62.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </HBox>
+      <Label fx:id="buttonpwfalschh" alignment="CENTER" layoutX="1.0" layoutY="479.0" prefHeight="17.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+	</children>
+	<cursor>
+		<Cursor fx:constant="DEFAULT" />
+	</cursor>
+</AnchorPane>

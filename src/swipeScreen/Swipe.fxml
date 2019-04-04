@@ -10,7 +10,7 @@
 
 <AnchorPane fx:id="hintergrundSwipe" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swipeScreen.SwipeController">
 	<children>
-		<Button fx:id="ZumChatBtn" layoutX="74.0" layoutY="425.0" mnemonicParsing="false" onAction="#ZumChat" prefHeight="25.0" prefWidth="152.0" styleClass="normalbtn" stylesheets="@../application/application.css" text="Zu den Chats" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="74.0" AnchorPane.topAnchor="425.0">
+		<Button fx:id="ZumChatBtn" layoutX="74.0" layoutY="425.0" mnemonicParsing="false" onAction="#zumChat" prefHeight="25.0" prefWidth="152.0" styleClass="normalbtn" stylesheets="@../application/application.css" text="Zu den Chats" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="74.0" AnchorPane.topAnchor="425.0">
 			<graphic>
 				<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
 					<image>
@@ -49,7 +49,7 @@
       </HBox>
 		<ToolBar prefHeight="40.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
 			<items>
-				<Button fx:id="btnProfil" mnemonicParsing="false" onAction="#ZumProfil" prefHeight="37.0" prefWidth="30.0" styleClass="iconbtn" stylesheets="@../application/application.css">
+				<Button fx:id="btnProfil" mnemonicParsing="false" onAction="#zumProfil" prefHeight="37.0" prefWidth="30.0" styleClass="iconbtn" stylesheets="@../application/application.css">
 					<graphic>
 						<ImageView fx:id="imgProfil" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
 							<image>
@@ -59,7 +59,7 @@
 					</graphic>
 				</Button>
             <HBox prefHeight="0.0" prefWidth="200.0" />
-				<Button fx:id="btnEinstellungen" mnemonicParsing="false" onAction="#ZumEinstellungen" prefHeight="37.0" prefWidth="30.0" styleClass="iconbtn" stylesheets="@../application/application.css">
+				<Button fx:id="btnEinstellungen" mnemonicParsing="false" onAction="#zumEinstellungen" prefHeight="37.0" prefWidth="30.0" styleClass="iconbtn" stylesheets="@../application/application.css">
 					<graphic>
 						<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
 							<image>

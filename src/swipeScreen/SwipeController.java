@@ -59,7 +59,7 @@ public class SwipeController extends Application implements Initializable  {
 	 * Wenn man auf der SwipeScene den Settings-Button drückt und zum
 	 * EinstellungsScreen weitergeleitet wird
 	 **/
-	public void ZumEinstellungen(ActionEvent event) throws IOException {
+	public void zumEinstellungen(ActionEvent event) throws IOException {
 
 		Parent BtnEinstellungenParent = FXMLLoader.load(getClass().getResource("/einstellungen/Einstellungen.fxml"));
 		Scene BtnEinstellungenScene = new Scene(BtnEinstellungenParent);
@@ -75,7 +75,7 @@ public class SwipeController extends Application implements Initializable  {
 	 * Wenn man in der EinloggSceene den Zurück-Button drückt und zum
 	 * AnfangsScreen(Profil erstellen//anmelden) weitergeleitet wird
 	 **/
-	public void ZumProfil(ActionEvent event) throws IOException {
+	public void zumProfil(ActionEvent event) throws IOException {
 
 		Parent ZumProfilParent = FXMLLoader.load(getClass().getResource("/profil/Profil.fxml"));
 		Scene ZumProfilScene = new Scene(ZumProfilParent);
@@ -91,7 +91,7 @@ public class SwipeController extends Application implements Initializable  {
 	 * Wenn man in der SwipeScene den Chats-Button drückt und zum
 	 * ChatScreen weitergeleitet wird
 	 **/
-	public void ZumChat(ActionEvent event) throws IOException {
+	public void zumChat(ActionEvent event) throws IOException {
 
 		Parent ZumChatParent = FXMLLoader.load(getClass().getResource("/chatlist/Chats_gui.fxml"));
 		Scene ZumChatScene = new Scene(ZumChatParent);

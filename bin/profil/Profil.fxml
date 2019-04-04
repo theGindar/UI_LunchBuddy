@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="hintergrund" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="profil.ProfilController">
+	<children>
+		<TextField fx:id="txtProfilName" disable="true" layoutX="130.0" layoutY="150.0" prefHeight="25.0" prefWidth="164.0" promptText="Max Mustermann" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="20.0" />
+		<Label layoutX="20.0" layoutY="152.0" prefHeight="21.0" prefWidth="85.0" text="Name:">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<TextArea fx:id="txtProfilBeschreibung" disable="true" layoutX="19.0" layoutY="379.00" prefHeight="90.0" prefWidth="260.0" promptText="Ich mag Züge." AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+		<TextField fx:id="txtProfilMail" disable="true" layoutX="130.0" layoutY="182.0" prefHeight="25.0" prefWidth="164.0" promptText="Max@Mustermann.de" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="20.0" />
+		<Label layoutX="20.0" layoutY="184.0" prefHeight="21.0" prefWidth="111.0" text="E-Mail:">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<Label layoutX="20.0" layoutY="217.0" prefHeight="21.0" prefWidth="85.0" text="Passwort:">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<TextField fx:id="txtProfilStudiengang" disable="true" layoutX="130.0" layoutY="247.0" prefHeight="25.0" prefWidth="164.0" promptText="Wirtschaftsinformatik" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="20.0" />
+		<Label layoutX="20.0" layoutY="249.0" prefHeight="21.0" prefWidth="99.0" text="Studiengang:">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<Label layoutX="20.0" layoutY="282.0" prefHeight="21.0" prefWidth="99.0" text="Alter:">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<Label layoutX="20.0" layoutY="315.0" prefHeight="21.0" prefWidth="99.0" text="Partnersuche:">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<Label layoutX="20.0" layoutY="347.0" prefHeight="21.0" prefWidth="99.0" text="Beschreibung:">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<Button fx:id="btnBearbeiten" layoutX="20.0" layoutY="503.0" mnemonicParsing="false" onAction="#ProfilBearbeiten" prefHeight="37.0" prefWidth="260.0" styleClass="normalbtn" stylesheets="@../application/application.css" text="Profil bearbeiten" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+			<font>
+				<Font size="16.0" />
+			</font>
+		</Button>
+		<RadioButton fx:id="ButtonProfilPartnersuche" disable="true" layoutX="150.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="66.0" selected="true" text="Ja" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="84.0">
+			<toggleGroup>
+				<ToggleGroup fx:id="partner" />
+			</toggleGroup>
+		</RadioButton>
+		<RadioButton fx:id="ButtonProfilPartnersuche" disable="true" layoutX="213.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="Nein" toggleGroup="$partner" AnchorPane.leftAnchor="213.0" AnchorPane.rightAnchor="-12.0" />
+		<PasswordField fx:id="ProfilPassword" disable="true" layoutX="130.0" layoutY="215.0" prefHeight="25.0" prefWidth="164.0" text="88888888" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="20.0" />
+		<TextField fx:id="txtProfilAlter" disable="true" layoutX="130.0" layoutY="280.0" prefHeight="25.0" prefWidth="164.0" promptText="20" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="20.0" />
+      <ToolBar layoutX="5.0" prefHeight="40.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+      		<Button fx:id="btnZurueck" mnemonicParsing="false" onAction="#ProfilZurueck" prefHeight="20.0" prefWidth="20.0" styleClass="iconbtn" stylesheets="@../application/application.css">
+      			<graphic>
+      				<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+      					<image>
+      						<Image url="@/application/zurueckPfeil.png" />
+      					</image>
+      				</ImageView>
+      			</graphic>
+      		</Button>
+        </items>
+      </ToolBar>
+      <HBox alignment="CENTER" layoutX="55.0" layoutY="26.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <Circle fx:id="kreis" fill="DODGERBLUE" radius="62.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </HBox>
+	</children>
+	<cursor>
+		<Cursor fx:constant="DEFAULT" />
+	</cursor>
+</AnchorPane>
