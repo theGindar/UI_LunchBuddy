@@ -10,6 +10,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.image.ImageView;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 public class EinstellungenController {
@@ -24,6 +26,17 @@ public class EinstellungenController {
 	private ToggleButton vibrationbtn;
 	@FXML
 	private Button btnEinstellunenZurueck;
+	@FXML
+	private ImageView vibrationOff;
+	@FXML
+	private ImageView vibrationOn;
+	@FXML
+	private ImageView soundOff;	
+	@FXML
+	private ImageView soundOn;
+	
+	
+	
 
 	/**
 	 * Wenn man in der EinloggSceene den Zurück-Button drückt und zum
@@ -44,11 +57,16 @@ public class EinstellungenController {
 		
 		if(!sound) {
 			soundbtn.setText("Deaktivieren");
+			soundOff.setVisible(false);
+			soundOn.setVisible(true);
 			sound = true;
 		}else {
 			soundbtn.setText("Aktivieren");
+			soundOff.setVisible(true);
+			soundOn.setVisible(false);
 			sound = false;
 		}
+		
 				
 				
 	}
@@ -56,9 +74,13 @@ public void VibrationAn() {
 		
 		if(!vibration) {
 			vibrationbtn.setText("Deaktivieren");
+			vibrationOff.setVisible(false);
+			vibrationOn.setVisible(true);
 			vibration = true;
 		}else {
 			vibrationbtn.setText("Aktivieren");
+			vibrationOff.setVisible(true);
+			vibrationOn.setVisible(false);
 			vibration = false;
 		}
 }

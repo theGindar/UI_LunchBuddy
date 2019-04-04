@@ -42,5 +42,23 @@
 		<ToggleButton fx:id="vibrationbtn" layoutX="40.0" layoutY="177.0" mnemonicParsing="false" onAction="#VibrationAn" styleClass="normalbtn" stylesheets="@../application/application.css" text="Aktivieren" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="177.0" />
 		<ToggleButton fx:id="soundbtn" layoutX="40.0" layoutY="100.0" mnemonicParsing="false" onAction="#SoundAn" prefHeight="25.0" prefWidth="104.0" styleClass="normalbtn" stylesheets="@../application/application.css" text="Aktivieren" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="100.0" />
 		<Button fx:id="logoutbtn" layoutX="40.0" layoutY="482.0" mnemonicParsing="false" onAction="#Logout" prefHeight="25.0" prefWidth="220.0" styleClass="normalbtn" stylesheets="@../application/application.css" text="Logout" textFill="RED" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="482.0" />
+      <ImageView fx:id="soundOff" fitHeight="27.0" fitWidth="30.0" layoutX="78.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="70.0">
+         <image>
+            <Image url="@/application/soundOff.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="vibrationOff" fitHeight="27.0" fitWidth="30.0" layoutX="74.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="70.0">
+         <image>
+            <Image url="@/application/vibrationOff.png" />
+         </image></ImageView>
+      <ImageView fx:id="soundOn" fitHeight="27.0" fitWidth="30.0" layoutX="85.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="70.0">
+         <image>
+            <Image url="@/application/SoundOn.png" />
+         </image></ImageView>
+      <ImageView fx:id="vibrationOn" fitHeight="27.0" fitWidth="30.0" layoutX="76.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="70.0">
+         <image>
+            <Image url="@/application/vibrationOn.png" />
+         </image>
+      </ImageView>
 	</children>
 </AnchorPane>
