@@ -4,18 +4,22 @@
 .iconbtn{
 	-fx-border-radius: 50%;
 	-fx-border-color: #4CAF50; /* Green */
+	-fx-background-radius: 50%;
 }
 
 .normalbtn{
+	-fx-border-radius: 12px;
 	-fx-background-color: white;
 	-fx-color-label-visible: black;
-	-fx-border-width: 2px solid #555555;
 	-fx-border-color: black;
 	
 	
 }
+
 .normalbtn:hover{
+	-fx-border-radius: 12px;
 	-fx-background-color: #555555;
+	-fx-background-radius: 12px;
 	-fx-text-fill: white;
 }
 
