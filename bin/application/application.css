@@ -1,15 +1,22 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 
-.test {
-    -fx-font-size: 14px;
-    -fx-font-family: sans-serif;
-    -fx-background-color: #545454;
-}
+
 .iconbtn{
 	-fx-border-radius: 50%;
 	-fx-border-color: #4CAF50; /* Green */
 }
 
 .normalbtn{
+	-fx-background-color: white;
+	-fx-color-label-visible: black;
+	-fx-border-width: 2px solid #555555;
+	-fx-border-color: black;
+	
 	
 }
+.normalbtn:hover{
+	-fx-background-color: #555555;
+	-fx-text-fill: white;
+}
+
+
