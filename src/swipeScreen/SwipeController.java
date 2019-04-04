@@ -22,39 +22,34 @@ import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
-public class SwipeController extends Application implements Initializable  {
+public class SwipeController extends Application implements Initializable {
 
 	@FXML
-    private AnchorPane hintergrundSwipe;
+	private AnchorPane hintergrundSwipe;
 
-    @FXML
-    private Button btnEinstellungen;
+	@FXML
+	private Button btnEinstellungen;
 
-    @FXML
-    private Button btnProfil;
+	@FXML
+	private Button btnProfil;
 
-    @FXML
-    private ImageView imgProfil;
+	@FXML
+	private ImageView imgProfil;
 
-    @FXML
-    private Button ZumChatBtn;
-    @FXML
-    private Circle kreis;
-  
-    
-	//Kreis erzeugen und Bild darin speichern
-@Override
-	public void initialize (URL url, ResourceBundle rb) {
+	@FXML
+	private Button ZumChatBtn;
+	@FXML
+	private Circle kreis;
+
+	// Kreis erzeugen und Bild darin speichern
+	@Override
+	public void initialize(URL url, ResourceBundle rb) {
 		kreis.setStroke(Color.SEAGREEN);
-		Image im= new Image("application\\SwipePicture.jpg",false);
+		Image im = new Image("application\\SwipePicture.jpg", false);
 		kreis.setFill(new ImagePattern(im));
 		kreis.setEffect(new DropShadow(+25d, 0d, +2d, Color.DARKSEAGREEN));
-}
-      
-   
-	
-		
-	
+	}
+
 	/**
 	 * Wenn man auf der SwipeScene den Settings-Button drückt und zum
 	 * EinstellungsScreen weitergeleitet wird
@@ -69,8 +64,7 @@ public class SwipeController extends Application implements Initializable  {
 		window.setScene(BtnEinstellungenScene);
 		window.show();
 	}
-	
-	
+
 	/**
 	 * Wenn man in der EinloggSceene den Zurück-Button drückt und zum
 	 * AnfangsScreen(Profil erstellen//anmelden) weitergeleitet wird
@@ -85,11 +79,10 @@ public class SwipeController extends Application implements Initializable  {
 		window.setScene(ZumProfilScene);
 		window.show();
 	}
-	
-	
+
 	/**
-	 * Wenn man in der SwipeScene den Chats-Button drückt und zum
-	 * ChatScreen weitergeleitet wird
+	 * Wenn man in der SwipeScene den Chats-Button drückt und zum ChatScreen
+	 * weitergeleitet wird
 	 **/
 	public void ZumChat(ActionEvent event) throws IOException {
 
@@ -101,11 +94,11 @@ public class SwipeController extends Application implements Initializable  {
 		window.setScene(ZumChatScene);
 		window.show();
 	}
+
 	@Override
 	public void start(Stage arg0) throws Exception {
 		// TODO Auto-generated method stub
-		
+
 	}
-	
-	
+
 }

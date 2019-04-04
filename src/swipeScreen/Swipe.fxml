@@ -19,6 +19,34 @@
 				</ImageView>
 			</graphic>
 		</Button>
+      <HBox layoutX="11.0" layoutY="263.0" prefHeight="100.0" prefWidth="279.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="80.0" styleClass="iconbtn" stylesheets="@../application/application.css">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/application/pfeilLinks.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <HBox prefHeight="100.0" prefWidth="122.0" />
+            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="80.0" styleClass="iconbtn" stylesheets="@../application/application.css">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/application/pfeilRechts.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="50.0" layoutY="87.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+         <children>
+            <Circle id="kreis" fx:id="kreis" fill="DODGERBLUE" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </HBox>
 		<ToolBar prefHeight="40.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
 			<items>
 				<Button fx:id="btnProfil" mnemonicParsing="false" onAction="#ZumProfil" prefHeight="37.0" prefWidth="30.0" styleClass="iconbtn" stylesheets="@../application/application.css">
@@ -42,10 +70,5 @@
 				</Button>
 			</items>
 		</ToolBar>
-      <HBox alignment="CENTER" layoutX="50.0" layoutY="87.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
-         <children>
-            <Circle id="kreis" fx:id="kreis" fill="DODGERBLUE" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
-         </children>
-      </HBox>
 	</children>
 </AnchorPane>
