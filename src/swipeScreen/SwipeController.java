@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import chatlist.ControllerChatlist;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -21,6 +22,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+import model.Model;
 
 public class SwipeController extends Application implements Initializable {
 
@@ -86,8 +88,16 @@ public class SwipeController extends Application implements Initializable {
 	 **/
 	public void ZumChat(ActionEvent event) throws IOException {
 
-		Parent ZumChatParent = FXMLLoader.load(getClass().getResource("/chatlist/Chats_gui.fxml"));
-		Scene ZumChatScene = new Scene(ZumChatParent);
+		//Parent ZumChatParent = FXMLLoader.load(getClass().getResource("/chatlist/Chats_gui.fxml"));
+		
+		Model model = new Model();
+		
+		FXMLLoader chatlistLoader = new FXMLLoader(getClass().getResource("/chatlist/Chats_gui.fxml"));
+		chatlistLoader.setController(new ControllerChatlist(model));
+		Parent chatlistUI = chatlistLoader.load();
+		
+		
+		Scene ZumChatScene = new Scene(chatlistUI);
 
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 

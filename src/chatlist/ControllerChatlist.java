@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 
 import chat.ChatListViewCell;
 import chat.ChatMessage;
+import chat.ControllerChat;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -86,12 +87,13 @@ public class ControllerChatlist implements Initializable {
 	public void zuEinemChat(String name) throws IOException {
 		model.setName(name);
 		
-		FXMLLoader chatlistLoader = new FXMLLoader(getClass().getResource("/chatlist/Chats_gui.fxml"));
-		chatlistLoader.setController(new ControllerChatlist(model));
-		Parent chatlistUI = chatlistLoader.load();
+		Model m = new Model();
+		FXMLLoader chatLoader = new FXMLLoader(getClass().getResource("/chat/ChatGUI.fxml"));
+		chatLoader.setController(new ControllerChat(model));
+		Parent chatUI = chatLoader.load();
 		
 		
-		Scene ChatScene = new Scene(chatlistUI);
+		Scene ChatScene = new Scene(chatUI);
 
 		Stage window = (Stage) ( listView.getScene()).getWindow();
 		
