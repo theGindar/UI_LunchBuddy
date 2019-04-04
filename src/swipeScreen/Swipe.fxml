@@ -41,5 +41,14 @@
 				</Button>
 			</items>
 		</ToolBar>
+      <HBox alignment="CENTER" layoutX="50.0" layoutY="87.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+         <children>
+            <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/application/SwipePicture.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
 	</children>
 </AnchorPane>
