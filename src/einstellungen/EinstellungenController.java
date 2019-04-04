@@ -22,6 +22,8 @@ public class EinstellungenController {
 	private ToggleButton soundbtn;
 	@FXML
 	private ToggleButton vibrationbtn;
+	@FXML
+	private Button btnEinstellunenZurueck;
 
 	/**
 	 * Wenn man in der EinloggSceene den Zurück-Button drückt und zum

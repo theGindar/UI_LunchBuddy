@@ -58,6 +58,8 @@ public class ProfilBearbeitenController extends Application implements Initializ
 	@FXML
 	private Button btnChangeImageB;
 	@FXML
+	private Button btnZurueck;
+	@FXML
 	private AnchorPane hintergrund;
 	@FXML
 	private ToggleGroup partner;

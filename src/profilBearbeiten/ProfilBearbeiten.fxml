@@ -78,7 +78,7 @@
       </Button>
       <ToolBar layoutX="5.0" prefHeight="40.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-      		<Button fx:id="btnZurueckk" mnemonicParsing="false" onAction="#ProfilZurueckk" prefHeight="21.0" prefWidth="36.0">
+      		<Button fx:id="btnZurueck" mnemonicParsing="false" onAction="#ProfilZurueckk" prefHeight="21.0" prefWidth="36.0">
       			<graphic>
       				<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
       					<image>
