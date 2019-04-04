@@ -5,6 +5,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="start.ControllerStart">
@@ -15,15 +16,19 @@
          </font>
       </Button>
       <Button fx:id="btnRegister" layoutX="57.0" layoutY="452.0" mnemonicParsing="false" onAction="#Register" prefHeight="31.0" prefWidth="260.0" text="Registrieren" textAlignment="CENTER" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
-      <ImageView fitHeight="225.0" fitWidth="225.0" layoutX="73.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="110.0">
-         <image>
-            <Image url="@/application/donut.png" />
-         </image>
-      </ImageView>
       <Label alignment="CENTER" layoutY="42.0" prefHeight="45.0" prefWidth="300.0" text="LunchBuddy" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
+      <HBox alignment="CENTER" layoutY="116.0" prefHeight="225.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fitHeight="227.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/application/donut.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>
