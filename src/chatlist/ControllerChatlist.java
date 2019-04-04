@@ -48,6 +48,13 @@ public class ControllerChatlist implements Initializable {
 			@Override
 			public void handle(MouseEvent event) {
 				System.out.println(listView.getSelectionModel().getSelectedItem().getName());
+				
+				/*try {
+					zuEinemChat();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}*/
 			}
 			
 		});
@@ -58,7 +65,7 @@ public class ControllerChatlist implements Initializable {
 	 * Wenn man in der Chatlist-Scene den Zurück-Button drückt und zum Hauptscreen
 	 * weitergeleitet wird
 	 **/
-	public void EinstellungenZurueckkk(ActionEvent event) throws IOException {
+	public void einstellungenZurueckkk(ActionEvent event) throws IOException {
 
 		Parent SwipeParent = FXMLLoader.load(getClass().getResource("/swipeScreen/Swipe.fxml"));
 		Scene SwipeScene = new Scene(SwipeParent);
@@ -75,13 +82,13 @@ public class ControllerChatlist implements Initializable {
 	 * Wenn man in der Chatlist-Scene auf einen Chat drückt und zum Chat
 	 * weitergeleitet wird
 	 **/
-	public void ZuEinemChat(ActionEvent event) throws IOException {
+	public void zuEinemChat() throws IOException {
 
 		Parent ChatParent = FXMLLoader.load(getClass().getResource("/chat/ChatGUI.fxml"));
 		Scene ChatScene = new Scene(ChatParent);
 
-		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
+		Stage window = (Stage) ( listView.getScene()).getWindow();
+		
 		window.setScene(ChatScene);
 		window.show();
 	}
