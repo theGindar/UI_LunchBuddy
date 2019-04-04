@@ -20,9 +20,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import model.Model;
 
 public class ControllerChatlist implements Initializable {
-
+	private final Model model;
 	@FXML
 	private Button chatlistzurueckbtn;
 
@@ -31,8 +32,8 @@ public class ControllerChatlist implements Initializable {
 
 	private ObservableList<Student> studentObservableList;
 
-	public ControllerChatlist() {
-
+	public ControllerChatlist(Model model) {
+		this.model = model;
 		studentObservableList = FXCollections.observableArrayList();
 		studentObservableList.addAll(new Student("Max Mustermann"), new Student("Hans Jürgen"),
 				new Student("Hildegard Müller"));
@@ -49,12 +50,12 @@ public class ControllerChatlist implements Initializable {
 			public void handle(MouseEvent event) {
 				System.out.println(listView.getSelectionModel().getSelectedItem().getName());
 				
-				/*try {
-					zuEinemChat();
+				try {
+					zuEinemChat(listView.getSelectionModel().getSelectedItem().getName());
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				}*/
+				}
 			}
 			
 		});
@@ -65,7 +66,7 @@ public class ControllerChatlist implements Initializable {
 	 * Wenn man in der Chatlist-Scene den Zurück-Button drückt und zum Hauptscreen
 	 * weitergeleitet wird
 	 **/
-	public void einstellungenZurueckkk(ActionEvent event) throws IOException {
+	public void EinstellungenZurueckkk(ActionEvent event) throws IOException {
 
 		Parent SwipeParent = FXMLLoader.load(getClass().getResource("/swipeScreen/Swipe.fxml"));
 		Scene SwipeScene = new Scene(SwipeParent);
@@ -82,10 +83,15 @@ public class ControllerChatlist implements Initializable {
 	 * Wenn man in der Chatlist-Scene auf einen Chat drückt und zum Chat
 	 * weitergeleitet wird
 	 **/
-	public void zuEinemChat() throws IOException {
-
-		Parent ChatParent = FXMLLoader.load(getClass().getResource("/chat/ChatGUI.fxml"));
-		Scene ChatScene = new Scene(ChatParent);
+	public void zuEinemChat(String name) throws IOException {
+		model.setName(name);
+		
+		FXMLLoader chatlistLoader = new FXMLLoader(getClass().getResource("/chatlist/Chats_gui.fxml"));
+		chatlistLoader.setController(new ControllerChatlist(model));
+		Parent chatlistUI = chatlistLoader.load();
+		
+		
+		Scene ChatScene = new Scene(chatlistUI);
 
 		Stage window = (Stage) ( listView.getScene()).getWindow();
 		
