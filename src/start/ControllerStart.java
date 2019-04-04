@@ -25,15 +25,15 @@ public class ControllerStart {
 	 * Wenn man in der Start-scene den Login-Button drückt wird man zum 
 	 * Login Screen weitergeleitet
 	 **/
-    public void Login(ActionEvent event) throws IOException {
+    public void login(ActionEvent event) throws IOException {
 
-    	Parent LoginParent = FXMLLoader.load(getClass().getResource("/logInScene/LogInScreen.fxml"));
-    	Scene LoginScene = new Scene(LoginParent);
+    	Parent loginParent = FXMLLoader.load(getClass().getResource("/logInScene/LogInScreen.fxml"));
+    	Scene loginScene = new Scene(loginParent);
 
 
     	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 
-    	window.setScene(LoginScene);
+    	window.setScene(loginScene);
     	window.show();
     }
 
@@ -41,15 +41,15 @@ public class ControllerStart {
 	 * Wenn man in der Start-scene den Registrieren-Button drückt wird man zum 
 	 * Registrieren Screen weitergeleitet
 	 **/
-    public void Register(ActionEvent event) throws IOException {
+    public void register(ActionEvent event) throws IOException {
 
-    	Parent RegisterParent = FXMLLoader.load(getClass().getResource("/profilErstellen/ProfilErstellen.fxml"));
-    	Scene RegisterScene = new Scene(RegisterParent);
+    	Parent registerParent = FXMLLoader.load(getClass().getResource("/profilErstellen/ProfilErstellen.fxml"));
+    	Scene registerScene = new Scene(registerParent);
 
 
     	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 
-    	window.setScene(RegisterScene);
+    	window.setScene(registerScene);
     	window.show();
     }
 

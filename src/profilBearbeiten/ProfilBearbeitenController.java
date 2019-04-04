@@ -96,7 +96,7 @@ public class ProfilBearbeitenController extends Application implements Initializ
 		
 		//Profilbild Ändern
 		
-		public void ProfilBildAendern(ActionEvent event) {
+		public void profilBildAendern(ActionEvent event) {
 			Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 			
 			fileChooser = new FileChooser();
@@ -130,19 +130,19 @@ public class ProfilBearbeitenController extends Application implements Initializ
 	
 	/**Wenn man in der ProfilbearbeitenScene den Speicher Button drückt 
 	und zur normalen ProfilScene weitergeleitet wird **/
-	public void ProfilBearbeitungSpeichern(ActionEvent event) throws IOException {
+	public void profilBearbeitungSpeichern(ActionEvent event) throws IOException {
 		String pattern = "[\\w\\.äöü-]+@[\\w\\.äöü-]+\\.(de|com|net|org)";
 		Pattern pt = Pattern.compile(pattern);
 		Matcher m = pt.matcher(txtMail.getText());
 		if(m.find()) {
 		
-		Parent ProfilBearbeitenParent = FXMLLoader.load(getClass().getResource("/profil/Profil.fxml"));
-		Scene ProfilBearbeitenScene = new Scene(ProfilBearbeitenParent);
+		Parent profilBearbeitenParent = FXMLLoader.load(getClass().getResource("/profil/Profil.fxml"));
+		Scene profilBearbeitenScene = new Scene(profilBearbeitenParent);
 		
 		
 		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 		
-		window.setScene(ProfilBearbeitenScene);
+		window.setScene(profilBearbeitenScene);
 		window.show();
 	}else {
 		buttonpwfalschh.setText("Bitte eine korrekte E-Mail eingeben");
@@ -155,15 +155,15 @@ public class ProfilBearbeitenController extends Application implements Initializ
 	 * Wenn man in der Profil bearbeiten Scene den Zurück-Button drückt gelangt man
 	 * wieder zum Profil
 	 **/
-	public void ProfilZurueckk(ActionEvent event) throws IOException {
+	public void profilZurueckk(ActionEvent event) throws IOException {
 		
-		Parent ProfilBearbeitenParent = FXMLLoader.load(getClass().getResource("/profil/Profil.fxml"));
-		Scene ProfilBearbeitenScene = new Scene(ProfilBearbeitenParent);
+		Parent profilZurueckkParent = FXMLLoader.load(getClass().getResource("/profil/Profil.fxml"));
+		Scene profilZurueckkScene = new Scene(profilZurueckkParent);
 		
 		
 		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 		
-		window.setScene(ProfilBearbeitenScene);
+		window.setScene(profilZurueckkScene);
 		window.show();
 	}
 

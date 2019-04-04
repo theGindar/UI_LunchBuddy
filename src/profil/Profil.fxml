@@ -57,7 +57,7 @@
 				<Font size="15.0" />
 			</font>
 		</Label>
-		<Button fx:id="btnBearbeiten" layoutX="20.0" layoutY="503.0" mnemonicParsing="false" onAction="#ProfilBearbeiten" prefHeight="37.0" prefWidth="260.0" styleClass="normalbtn" stylesheets="@../application/application.css" text="Profil bearbeiten" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+		<Button fx:id="btnBearbeiten" layoutX="20.0" layoutY="503.0" mnemonicParsing="false" onAction="#profilBearbeiten" prefHeight="37.0" prefWidth="260.0" styleClass="normalbtn" stylesheets="@../application/application.css" text="Profil bearbeiten" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
 			<font>
 				<Font size="16.0" />
 			</font>
@@ -72,7 +72,7 @@
 		<TextField fx:id="txtProfilAlter" disable="true" layoutX="130.0" layoutY="280.0" prefHeight="25.0" prefWidth="164.0" promptText="20" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="20.0" />
       <ToolBar layoutX="5.0" prefHeight="40.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-      		<Button fx:id="btnZurueck" mnemonicParsing="false" onAction="#ProfilZurueck" prefHeight="20.0" prefWidth="20.0" styleClass="iconbtn" stylesheets="@../application/application.css">
+      		<Button fx:id="btnZurueck" mnemonicParsing="false" onAction="#profilZurueck" prefHeight="20.0" prefWidth="20.0" styleClass="iconbtn" stylesheets="@../application/application.css">
       			<graphic>
       				<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
       					<image>

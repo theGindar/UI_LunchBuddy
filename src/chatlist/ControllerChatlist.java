@@ -65,14 +65,14 @@ public class ControllerChatlist implements Initializable {
 	 * Wenn man in der Chatlist-Scene den Zurück-Button drückt und zum Hauptscreen
 	 * weitergeleitet wird
 	 **/
-	public void EinstellungenZurueckkk(ActionEvent event) throws IOException {
+	public void einstellungenZurueckkk(ActionEvent event) throws IOException {
 
-		Parent SwipeParent = FXMLLoader.load(getClass().getResource("/swipeScreen/Swipe.fxml"));
-		Scene SwipeScene = new Scene(SwipeParent);
+		Parent einstellungenZurueckkkParent = FXMLLoader.load(getClass().getResource("/swipeScreen/Swipe.fxml"));
+		Scene einstellungenZurueckkkScene = new Scene(einstellungenZurueckkkParent);
 
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-		window.setScene(SwipeScene);
+		window.setScene(einstellungenZurueckkkScene);
 		window.show();
 	}
 	

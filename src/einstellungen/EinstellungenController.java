@@ -87,14 +87,14 @@ public void VibrationAn() {
 	/**
 	 * Weiterleitung zur Startseite
 	 **/
-	public void Logout(ActionEvent event) throws IOException {
+	public void logout(ActionEvent event) throws IOException {
 
-		Parent LogoutParent = FXMLLoader.load(getClass().getResource("/start/start_gui.fxml"));
-		Scene LogoutScene = new Scene(LogoutParent);
+		Parent logoutParent = FXMLLoader.load(getClass().getResource("/start/start_gui.fxml"));
+		Scene logoutScene = new Scene(logoutParent);
 
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-		window.setScene(LogoutScene);
+		window.setScene(logoutScene);
 		window.show();
 	}
 

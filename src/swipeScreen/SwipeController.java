@@ -92,12 +92,12 @@ public class SwipeController extends Application implements Initializable {
 	 **/
 	public void zumEinstellungen(ActionEvent event) throws IOException {
 
-		Parent BtnEinstellungenParent = FXMLLoader.load(getClass().getResource("/einstellungen/Einstellungen.fxml"));
-		Scene BtnEinstellungenScene = new Scene(BtnEinstellungenParent);
+		Parent btnEinstellungenParent = FXMLLoader.load(getClass().getResource("/einstellungen/Einstellungen.fxml"));
+		Scene btnEinstellungenScene = new Scene(btnEinstellungenParent);
 
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-		window.setScene(BtnEinstellungenScene);
+		window.setScene(btnEinstellungenScene);
 		window.show();
 	}
 
@@ -107,12 +107,12 @@ public class SwipeController extends Application implements Initializable {
 	 **/
 	public void zumProfil(ActionEvent event) throws IOException {
 
-		Parent ZumProfilParent = FXMLLoader.load(getClass().getResource("/profil/Profil.fxml"));
-		Scene ZumProfilScene = new Scene(ZumProfilParent);
+		Parent zumProfilParent = FXMLLoader.load(getClass().getResource("/profil/Profil.fxml"));
+		Scene zumProfilScene = new Scene(zumProfilParent);
 
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-		window.setScene(ZumProfilScene);
+		window.setScene(zumProfilScene);
 		window.show();
 	}
 

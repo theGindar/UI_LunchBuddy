@@ -16,7 +16,7 @@
 		<ListView fx:id="listView" layoutY="40.0" prefHeight="510.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
 		<ToolBar prefHeight="40.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 			<items>
-				<Button fx:id="chatlistzurueckbtn" mnemonicParsing="false" onAction="#EinstellungenZurueckkk" styleClass="iconbtn" stylesheets="@../application/application.css">
+				<Button fx:id="chatlistzurueckbtn" mnemonicParsing="false" onAction="#einstellungenZurueckkk" styleClass="iconbtn" stylesheets="@../application/application.css">
 					<graphic>
 						<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
 							<image>

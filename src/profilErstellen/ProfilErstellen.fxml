@@ -60,7 +60,7 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Button fx:id="btnErstellenSpeichern" layoutX="78.0" layoutY="503.0" mnemonicParsing="false" onAction="#ProfilErstellenSpeichern" prefHeight="35.0" prefWidth="141.0" styleClass="normalbtn" stylesheets="@../application/application.css" text="Erstellen" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+      <Button fx:id="btnErstellenSpeichern" layoutX="78.0" layoutY="503.0" mnemonicParsing="false" onAction="#profilErstellenSpeichern" prefHeight="35.0" prefWidth="141.0" styleClass="normalbtn" stylesheets="@../application/application.css" text="Erstellen" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
          <font>
             <Font size="16.0" />
          </font>
@@ -71,14 +71,14 @@
          </toggleGroup>
       </RadioButton>
       <RadioButton layoutX="208.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Nein" toggleGroup="$partnerErstellen" AnchorPane.leftAnchor="208.0" AnchorPane.rightAnchor="25.0" />
-      <Button fx:id="btnChangeImage" layoutX="20.0" layoutY="76.0" mnemonicParsing="false" onAction="#ProfilBildAendern" prefHeight="18.0" prefWidth="67.0" styleClass="normalbtn" stylesheets="@../application/application.css" text="ändern" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="99.0">
+      <Button fx:id="btnChangeImage" layoutX="20.0" layoutY="76.0" mnemonicParsing="false" onAction="#profilBildAendern" prefHeight="18.0" prefWidth="67.0" styleClass="normalbtn" stylesheets="@../application/application.css" text="ändern" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="99.0">
          <font>
             <Font size="10.0" />
          </font>
       </Button>
       <ToolBar layoutX="5.0" prefHeight="40.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <items>
-            <Button fx:id="btnErstellenZurueck" mnemonicParsing="false" onAction="#ProfilErstellenZurueck" styleClass="iconbtn" stylesheets="@../application/application.css">
+            <Button fx:id="btnErstellenZurueck" mnemonicParsing="false" onAction="#profilErstellenZurueck" styleClass="iconbtn" stylesheets="@../application/application.css">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>

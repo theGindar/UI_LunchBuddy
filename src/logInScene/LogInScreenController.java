@@ -50,19 +50,19 @@ public class LogInScreenController {
 	 * Wenn man in der EinloggSceene den Anmelden-Button drückt und zum
 	 * Haupt-,SwipeScreen weitergeleitet wird
 	 **/
-	public void ProfilAnmelden(ActionEvent event) throws IOException {
+	public void profilAnmelden(ActionEvent event) throws IOException {
 		String pattern = "[\\w\\.äöü-]+@[\\w\\.äöü-]+\\.(de|com|net|org)";
 		Pattern pt = Pattern.compile(pattern);
 		Matcher m = pt.matcher(txtLogINMail.getText());
 		if(m.find()) {
 			
 		
-		Parent ProfilAnmeldenParent = FXMLLoader.load(getClass().getResource("/swipeScreen/Swipe.fxml")); // 
-		Scene ProfilAnmeldenScene = new Scene(ProfilAnmeldenParent);
+		Parent profilAnmeldenParent = FXMLLoader.load(getClass().getResource("/swipeScreen/Swipe.fxml")); // 
+		Scene profilAnmeldenScene = new Scene(profilAnmeldenParent);
 
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-		window.setScene(ProfilAnmeldenScene);
+		window.setScene(profilAnmeldenScene);
 		window.show();
 		}else {
 			PwFalsch.setText("Bitte eine korrekte E-Mail eingeben");
@@ -75,14 +75,14 @@ public class LogInScreenController {
 	 * Wenn man in der EinloggSceene den Zurück-Button drückt und zum
 	 * AnfangsScreen(Profil erstellen//anmelden) weitergeleitet wird
 	 **/
-	public void AnmeldenZurueck(ActionEvent event) throws IOException {
+	public void anmeldenZurueck(ActionEvent event) throws IOException {
 
-		Parent AnmeldenZurueckParent = FXMLLoader.load(getClass().getResource("/start/Start_gui.fxml"));
-		Scene AnmeldenZurueckScene = new Scene(AnmeldenZurueckParent);
+		Parent anmeldenZurueckParent = FXMLLoader.load(getClass().getResource("/start/Start_gui.fxml"));
+		Scene anmeldenZurueckScene = new Scene(anmeldenZurueckParent);
 
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-		window.setScene(AnmeldenZurueckScene);
+		window.setScene(anmeldenZurueckScene);
 		window.show();
 	}
 

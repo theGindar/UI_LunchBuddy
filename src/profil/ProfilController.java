@@ -25,10 +25,10 @@ import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 // ProfilBearbeiten.fmxl 
-public class ProfilController extends Application implements Initializable{
-	
-	//Profil.fxml
-	@FXML													
+public class ProfilController extends Application implements Initializable {
+
+	// Profil.fxml
+	@FXML
 	private TextField txtProfilName;
 	@FXML
 	private TextField txtProfilMail;
@@ -48,55 +48,52 @@ public class ProfilController extends Application implements Initializable{
 	private PasswordField ProfilPassword;
 	@FXML
 	private Circle kreis;
-	
-	
-	
-	//Kreis erzeugen und Bild darin speichern
-@Override
-	public void initialize (URL url, ResourceBundle rb) {
+
+	// Kreis erzeugen und Bild darin speichern
+	@Override
+	public void initialize(URL url, ResourceBundle rb) {
 		kreis.setStroke(Color.SEAGREEN);
-		Image im= new Image("/application/profile_icon.png",false);
+		Image im = new Image("/application/profile_icon.png", false);
 		kreis.setFill(new ImagePattern(im));
 		kreis.setEffect(new DropShadow(+25d, 0d, +2d, Color.DARKSEAGREEN));
-		
-	}
-	
-	/**Wenn man in der ProfilScene den Bearbeiten Button drückt 
-	und zur ProfilBearbeitenScene weitergeleitet wird **/
-	public void ProfilBearbeiten(ActionEvent event) throws IOException {
-		
-		Parent ProfilParent = FXMLLoader.load(getClass().getResource("/profilBearbeiten/ProfilBearbeiten.fxml"));
-		Scene ProfilScene = new Scene(ProfilParent);
-		
-		//This line gets to Stage Information
-		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-		
-		window.setScene(ProfilScene);
-		window.show();
-	}	
-	
-	/**
-	 * Wenn man in der ProfilSceene den Zurück-Button drückt und zum
-	 * SwipeScreen weitergeleitet wird
-	 **/
-	public void ProfilZurueck(ActionEvent event) throws IOException {
 
-		Parent ProfilZurueckParent = FXMLLoader.load(getClass().getResource("/swipeScreen/Swipe.fxml"));
-		Scene ProfilZurueckScene = new Scene(ProfilZurueckParent);
+	}
+
+	/**
+	 * Wenn man in der ProfilScene den Bearbeiten Button drückt und zur
+	 * ProfilBearbeitenScene weitergeleitet wird
+	 **/
+	public void profilBearbeiten(ActionEvent event) throws IOException {
+
+		Parent profilParent = FXMLLoader.load(getClass().getResource("/profilBearbeiten/ProfilBearbeiten.fxml"));
+		Scene profilScene = new Scene(profilParent);
+
+		// This line gets to Stage Information
+		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+		window.setScene(profilScene);
+		window.show();
+	}
+
+	/**
+	 * Wenn man in der ProfilSceene den Zurück-Button drückt und zum SwipeScreen
+	 * weitergeleitet wird
+	 **/
+	public void profilZurueck(ActionEvent event) throws IOException {
+
+		Parent profilZurueckParent = FXMLLoader.load(getClass().getResource("/swipeScreen/Swipe.fxml"));
+		Scene profilZurueckScene = new Scene(profilZurueckParent);
 
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-		window.setScene(ProfilZurueckScene);
+		window.setScene(profilZurueckScene);
 		window.show();
 	}
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
-		
-	}
-	
 
-	
 	}
 
+}

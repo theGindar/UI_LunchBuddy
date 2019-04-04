@@ -95,7 +95,7 @@ public class ProfilErstellenController extends Application implements Initializa
 
 	//Profilbild Ändern
 	
-	public void ProfilBildAendern(ActionEvent event) {
+	public void profilBildAendern(ActionEvent event) {
 		Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		
 		fileChooser = new FileChooser();
@@ -130,19 +130,19 @@ public class ProfilErstellenController extends Application implements Initializa
 	
 	/// **Wenn man in der ProfilErstellenScreen den Erstellen-Button drückt
 	// und zum SwipeScreen weitergeleitet wird **/
-	public void ProfilErstellenSpeichern(ActionEvent event) throws IOException {
+	public void profilErstellenSpeichern(ActionEvent event) throws IOException {
 		
 		String pattern = "[\\w\\.äöü-]+@[\\w\\.äöü-]+\\.(de|com|net|org)";
 		Pattern pt = Pattern.compile(pattern);
 		Matcher m = pt.matcher(txtErstellenMail.getText());
 		if(m.find()) {
 
-		Parent ProfilErstellenParent = FXMLLoader.load(getClass().getResource("/swipeScreen/Swipe.fxml"));
-		Scene ProfilErstellenScene = new Scene(ProfilErstellenParent);
+		Parent profilErstellenParent = FXMLLoader.load(getClass().getResource("/swipeScreen/Swipe.fxml"));
+		Scene profilErstellenScene = new Scene(profilErstellenParent);
 
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-		window.setScene(ProfilErstellenScene);
+		window.setScene(profilErstellenScene);
 		window.show();} 
 		else {
 			LabelPwFalsch.setText("Bitte eine korrekte E-Mail eingeben");
@@ -155,14 +155,14 @@ public class ProfilErstellenController extends Application implements Initializa
 	 * Wenn man in der ProfilErstellenScene den Zurück-Button drückt und zum
 	 * AnfangsScreen(Profil erstellen//anmelden) weitergeleitet wird
 	 **/
-	public void ProfilErstellenZurueck(ActionEvent event) throws IOException {
+	public void profilErstellenZurueck(ActionEvent event) throws IOException {
 
-		Parent ProfilErstellenParent = FXMLLoader.load(getClass().getResource("/start/Start_gui.fxml"));
-		Scene ProfilErstellenScene = new Scene(ProfilErstellenParent);
+		Parent profilErstellenParent = FXMLLoader.load(getClass().getResource("/start/Start_gui.fxml"));
+		Scene profilErstellenScene = new Scene(profilErstellenParent);
 
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-		window.setScene(ProfilErstellenScene);
+		window.setScene(profilErstellenScene);
 		window.show();
 	}
 
