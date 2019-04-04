@@ -14,12 +14,16 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import model.Model;
 
 public class ControllerChat implements Initializable {
+	
+	
 	private final Model model;
 	@FXML
 	private ListView<ChatMessage> chatListView;
@@ -29,6 +33,9 @@ public class ControllerChat implements Initializable {
 
 	@FXML
 	private Button btnSend;
+	
+    @FXML
+    private Label ueberschriftChat;
 
 	@FXML
 	private TextField textFeldChat;
@@ -42,6 +49,8 @@ public class ControllerChat implements Initializable {
 		messageObservableList.addAll(
 				new ChatMessage("Guten Tag", true), 
 				new ChatMessage(model.getName(), false));
+		
+		//ueberschriftChat.setText("Hallo");
 	}
 
 	@Override
@@ -58,6 +67,7 @@ public class ControllerChat implements Initializable {
 		messageObservableList.add(new ChatMessage(textFeldChat.getText(), true));
 		System.out.println(textFeldChat.getText());
 		textFeldChat.setText("");
+
 
 	}
 

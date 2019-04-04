@@ -13,7 +13,7 @@
 
 	<children>
 
-		<ListView fx:id="listView" layoutY="108.0" prefHeight="442.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="108.0" />
+		<ListView fx:id="listView" layoutY="40.0" prefHeight="510.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
 		<ToolBar prefHeight="40.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 			<items>
 				<Button fx:id="chatlistzurueckbtn" mnemonicParsing="false" onAction="#EinstellungenZurueckkk" styleClass="iconbtn" stylesheets="@../application/application.css">
@@ -27,7 +27,7 @@
 				</Button>
 			</items>
 		</ToolBar>
-      <Label alignment="CENTER" layoutY="56.0" prefHeight="17.0" prefWidth="300.0" text="Chats" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="56.0">
+      <Label alignment="CENTER" layoutY="56.0" prefHeight="17.0" prefWidth="300.0" text="Chats" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
          <font>
             <Font size="20.0" />
          </font>
