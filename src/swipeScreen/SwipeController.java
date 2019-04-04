@@ -1,19 +1,28 @@
 package swipeScreen;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
-public class SwipeController {
+public class SwipeController extends Application implements Initializable  {
 
 	@FXML
     private AnchorPane hintergrundSwipe;
@@ -29,6 +38,20 @@ public class SwipeController {
 
     @FXML
     private Button ZumChatBtn;
+    @FXML
+    private Circle kreis;
+  
+    
+	//Kreis erzeugen und Bild darin speichern
+@Override
+	public void initialize (URL url, ResourceBundle rb) {
+		kreis.setStroke(Color.SEAGREEN);
+		Image im= new Image("application\\SwipePicture.jpg",false);
+		kreis.setFill(new ImagePattern(im));
+		kreis.setEffect(new DropShadow(+25d, 0d, +2d, Color.DARKSEAGREEN));
+}
+      
+   
 	
 		
 	
@@ -77,6 +100,11 @@ public class SwipeController {
 
 		window.setScene(ZumChatScene);
 		window.show();
+	}
+	@Override
+	public void start(Stage arg0) throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	
