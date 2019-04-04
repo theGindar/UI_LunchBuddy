@@ -15,7 +15,7 @@
          </font>
       </Button>
       <Button fx:id="btnRegister" layoutX="57.0" layoutY="452.0" mnemonicParsing="false" onAction="#Register" prefHeight="31.0" prefWidth="260.0" text="Registrieren" textAlignment="CENTER" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
-      <ImageView fitHeight="195.0" fitWidth="225.0" layoutX="73.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="110.0">
+      <ImageView fitHeight="225.0" fitWidth="225.0" layoutX="73.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="110.0">
          <image>
             <Image url="@/application/donut.png" />
          </image>
