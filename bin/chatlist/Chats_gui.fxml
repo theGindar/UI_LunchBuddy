@@ -27,7 +27,7 @@
 				</Button>
 			</items>
 		</ToolBar>
-      <Label alignment="CENTER" layoutY="56.0" prefHeight="17.0" prefWidth="300.0" text="Chats" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+      <Label alignment="CENTER" layoutY="56.0" prefHeight="17.0" prefWidth="300.0" text="Chats" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="5.0">
          <font>
             <Font size="20.0" />
          </font>

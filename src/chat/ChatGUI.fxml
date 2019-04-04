@@ -27,9 +27,9 @@
             </Button>
         </items>
       </ToolBar>
-      <Button fx:id="btnSend" layoutX="198.0" layoutY="511.0" mnemonicParsing="false" onAction="#btnSendonclick" prefHeight="28.0" prefWidth="88.0" text="Senden" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="14.0" />
-      <TextField fx:id="textFeldChat" layoutX="21.0" layoutY="513.0" prefHeight="25.0" prefWidth="178.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="101.0" />
-      <Label fx:id="ueberschriftChat" alignment="CENTER" layoutY="56.0" text="Chat" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+      <TextField fx:id="textFeldChat" layoutX="14.0" layoutY="513.0" prefHeight="25.0" prefWidth="194.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="86.0" />
+      <Button fx:id="btnSend" layoutX="221.0" layoutY="512.0" mnemonicParsing="false" onAction="#btnSendonclick" prefHeight="27.0" prefWidth="61.0" styleClass="normalbtn" stylesheets="@../application/application.css" text="Senden" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="20.0" />
+      <Label fx:id="ueberschriftChat" alignment="CENTER" layoutY="56.0" text="Chat" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="5.0">
          <font>
             <Font size="20.0" />
          </font>
