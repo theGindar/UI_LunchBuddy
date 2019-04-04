@@ -24,6 +24,23 @@
 	-fx-text-fill: white;
 }
 
+/* Design vom logout Button */
+.logoutbtn{
+	-fx-border-radius: 12px;
+	-fx-background-color: white;
+	-fx-background-radius: 12px;
+	-fx-color-label-visible: black;
+	-fx-border-color: black;
+}
+
+/* Wenn man mit Maus über Button fährt */
+.logoutbtn:hover{
+	-fx-border-radius: 12px;
+	-fx-background-color: #555555;
+	-fx-background-radius: 12px;
+	-fx-text-fill: red;
+}
+
 
 /* Nachricht im Chat */
 .grid{
