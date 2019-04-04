@@ -60,7 +60,7 @@
 				<Font size="15.0" />
 			</font>
 		</Label>
-		<Button fx:id="btnSpeichern" layoutX="78.0" layoutY="503.0" mnemonicParsing="false" onAction="#ProfilBearbeitungSpeichern" prefHeight="35.0" prefWidth="141.0" text="Speichern" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+		<Button fx:id="btnSpeichern" layoutX="78.0" layoutY="503.0" mnemonicParsing="false" onAction="#ProfilBearbeitungSpeichern" prefHeight="35.0" prefWidth="141.0" styleClass="normalbtn" stylesheets="@../application/application.css" text="Speichern" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
 			<font>
 				<Font size="16.0" />
 			</font>
@@ -71,14 +71,14 @@
 			</toggleGroup>
 		</RadioButton>
 		<RadioButton fx:id="ButtonPartnersuche" layoutX="208.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Nein" toggleGroup="$partnerJa" AnchorPane.leftAnchor="208.0" AnchorPane.rightAnchor="25.0" />
-      <Button fx:id="btnChangeImageB" layoutX="17.0" layoutY="99.0" mnemonicParsing="false" onAction="#ProfilBildAendern" prefHeight="18.0" prefWidth="67.0" text="ändern" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="99.0">
+      <Button fx:id="btnChangeImageB" layoutX="17.0" layoutY="99.0" mnemonicParsing="false" onAction="#ProfilBildAendern" prefHeight="18.0" prefWidth="67.0" styleClass="normalbtn" stylesheets="@../application/application.css" text="ändern" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="99.0">
          <font>
             <Font size="10.0" />
          </font>
       </Button>
       <ToolBar layoutX="5.0" prefHeight="40.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-      		<Button fx:id="btnZurueck" mnemonicParsing="false" onAction="#ProfilZurueckk" prefHeight="21.0" prefWidth="36.0">
+      		<Button fx:id="btnZurueck" mnemonicParsing="false" onAction="#ProfilZurueckk" prefHeight="21.0" prefWidth="36.0" styleClass="iconbtn" stylesheets="@../application/application.css">
       			<graphic>
       				<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
       					<image>
