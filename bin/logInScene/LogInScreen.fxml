@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="hintergrundLogIn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logInScene.LogInScreenController">
+<AnchorPane fx:id="hintergrundLogIn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="300.0" styleClass="background" stylesheets="@../../bin/application/application.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logInScene.LogInScreenController">
 	<children>
 		<Button fx:id="btnLogInAnmelden" disable="true" layoutX="-3.0" layoutY="479.0" mnemonicParsing="false" onAction="#ProfilAnmelden" prefHeight="43.0" prefWidth="300.0" styleClass="normalbtn" stylesheets="@../application/application.css" text="Einloggen" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
       <Label alignment="CENTER" layoutY="313.0" prefHeight="17.0" prefWidth="93.0" text="E-Mail:" AnchorPane.bottomAnchor="210.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
