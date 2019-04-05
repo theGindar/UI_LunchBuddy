@@ -38,9 +38,17 @@ public class LogInScreenController {
 	private Label PwFalsch;
 	
 	@FXML
-	public void onEnter(ActionEvent ae){
-	   System.out.println("Enter gedrückt") ;
+	public void onEnter(ActionEvent ae)throws IOException{
+	   System.out.println("Enter gedrückt");
 
+	   if (PasswordLogIn.getText().trim().isEmpty()){
+		   PwFalsch.setText("Bitte Passwort eingeben");
+			PwFalsch.setTextFill(Color.web("#FF0000"));
+	   } else {
+		   profilAnmelden(ae);
+	   }
+	   
+	   	
 	   
 	   
 	}
