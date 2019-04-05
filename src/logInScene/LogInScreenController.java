@@ -36,30 +36,27 @@ public class LogInScreenController {
 	private PasswordField PasswordLogIn;
 	@FXML
 	private Label PwFalsch;
-	
-	@FXML
-	public void onEnter(ActionEvent ae)throws IOException{
-	   System.out.println("Enter gedrückt");
 
-	   if (PasswordLogIn.getText().trim().isEmpty()){
-		   PwFalsch.setText("Bitte Passwort eingeben");
+	@FXML
+	public void onEnter(ActionEvent ae) throws IOException {
+		System.out.println("Enter gedrückt");
+
+		if (PasswordLogIn.getText().trim().isEmpty()) {
+			PwFalsch.setText("Bitte Passwort eingeben");
 			PwFalsch.setTextFill(Color.web("#FF0000"));
-	   } else {
-		   profilAnmelden(ae);
-	   }
-	   
-	   	
-	   
-	   
+		} else {
+			profilAnmelden(ae);
+		}
+
 	}
 
-	// Man kann sich nur Anmelden, wenn man seine E-Mail und sein Password angegeben hat 
+	// Man kann sich nur Anmelden, wenn man seine E-Mail und sein Password angegeben
+	// hat
 	@FXML
 	public void initialize() {
 		this.btnLogInAnmelden.disableProperty().bind(
-			Bindings.or(this.txtLogINMail.textProperty().isEmpty(),
-				         this.PasswordLogIn.textProperty().isEmpty()));
-		
+				Bindings.or(this.txtLogINMail.textProperty().isEmpty(), this.PasswordLogIn.textProperty().isEmpty()));
+
 	}
 
 	/**
@@ -70,20 +67,19 @@ public class LogInScreenController {
 		String pattern = "[\\w\\.äöü-]+@[\\w\\.äöü-]+\\.(de|com|net|org)";
 		Pattern pt = Pattern.compile(pattern);
 		Matcher m = pt.matcher(txtLogINMail.getText());
-		if(m.find()) {
-			
-		
-		Parent profilAnmeldenParent = FXMLLoader.load(getClass().getResource("/swipeScreen/Swipe.fxml")); // 
-		Scene profilAnmeldenScene = new Scene(profilAnmeldenParent);
+		if (m.find()) {
 
-		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+			Parent profilAnmeldenParent = FXMLLoader.load(getClass().getResource("/swipeScreen/Swipe.fxml")); //
+			Scene profilAnmeldenScene = new Scene(profilAnmeldenParent);
 
-		window.setScene(profilAnmeldenScene);
-		window.show();
-		}else {
+			Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+			window.setScene(profilAnmeldenScene);
+			window.show();
+		} else {
 			PwFalsch.setText("Bitte eine korrekte E-Mail eingeben");
 			PwFalsch.setTextFill(Color.web("#FF0000"));
-			
+
 		}
 	}
 
