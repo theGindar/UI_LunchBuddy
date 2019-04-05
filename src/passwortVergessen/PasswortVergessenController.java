@@ -61,6 +61,8 @@ public class PasswortVergessenController {
 
 			PwFalsch.setText("Ihr neues Passwort wurde zugesadt!");
 			PwFalsch.setTextFill(Color.web("#12D81B"));
+			
+			txtMail.setDisable(true);
 
 		} else {
 			PwFalsch.setText("Bitte eine korrekte E-Mail eingeben");
