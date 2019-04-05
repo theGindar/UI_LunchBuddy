@@ -137,6 +137,12 @@ public class PasswortAendernController {
 						System.out.println("Korrekt!");
 						PwFalsch.setText("Passwort wurde geändert!");
 						PwFalsch.setTextFill(Color.web("#12D81B"));
+						
+						pw1.setDisable(true);
+						pw2.setDisable(true);
+						pw3.setDisable(true);
+						
+						
 					}
 				}
 			}
