@@ -13,12 +13,16 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
@@ -29,25 +33,43 @@ public class ProfilController extends Application implements Initializable {
 
 	// Profil.fxml
 	@FXML
-	private TextField txtProfilName;
+	private AnchorPane hintergrund;
+
 	@FXML
-	private TextField txtProfilMail;
+	private TextField txtName;
+
 	@FXML
-	private TextField txtProfilStudiengang;
+	private TextField txtMail;
+
 	@FXML
-	private TextArea txtProfilBeschreibung;
+	private TextField txtStudiengang;
+
 	@FXML
-	private TextField txtProfilAlter;
+	private DatePicker txtAlter;
+
 	@FXML
-	private RadioButton ButtonProfilPartnersuche;
+	private TextArea txtBeschreibung;
+
 	@FXML
-	private Button btnBearbeiten;
+	private Button btnSpeichern;
+
+	@FXML
+	private RadioButton ButtonPartnersuche;
+
+	@FXML
+	private ToggleGroup partnerJa;
+
+	@FXML
+	private Button btnChangeImageB;
+
 	@FXML
 	private Button btnZurueck;
-	@FXML
-	private PasswordField ProfilPassword;
+
 	@FXML
 	private Circle kreis;
+
+	@FXML
+	private Label buttonpwfalschh;
 
 	// Kreis erzeugen und Bild darin speichern
 	@Override
