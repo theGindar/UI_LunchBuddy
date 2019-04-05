@@ -33,7 +33,7 @@
       </HBox>
       <ToolBar layoutX="1.0" prefHeight="40.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <items>
-            <Button fx:id="btnZurueckZuLogin" mnemonicParsing="false">
+            <Button fx:id="btnZurueckZuLogin" mnemonicParsing="false" onAction="#zurueckZuLogin">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>

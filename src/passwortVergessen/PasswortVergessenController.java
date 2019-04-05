@@ -95,11 +95,12 @@ public class PasswortVergessenController {
 	public void zurueckZuLogin(ActionEvent event) throws IOException {
 
 		Model model = new Model();
-
-		FXMLLoader chatlistLoader = new FXMLLoader(getClass().getResource("/chatlist/Chats_gui.fxml"));
+		
+		FXMLLoader chatlistLoader = new FXMLLoader(getClass().getResource("/einstellungen/Einstellungen.fxml"));
 		chatlistLoader.setController(new ControllerChatlist(model));
 		Parent chatlistUI = chatlistLoader.load();
-
+		
+		
 		Scene zumChatScene = new Scene(chatlistUI);
 
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
