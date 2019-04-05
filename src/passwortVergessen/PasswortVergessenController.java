@@ -92,7 +92,7 @@ public class PasswortVergessenController {
 	 * Wenn man in der EinloggSceene den Zurück-Button drückt und zum
 	 * AnfangsScreen(Profil erstellen//anmelden) weitergeleitet wird
 	 **/
-	public void anmeldenZurueck(ActionEvent event) throws IOException {
+	public void zurueckZuLogin(ActionEvent event) throws IOException {
 
 		Model model = new Model();
 
