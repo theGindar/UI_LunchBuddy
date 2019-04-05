@@ -71,7 +71,7 @@
          </toggleGroup>
       </RadioButton>
       <RadioButton layoutX="208.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Nein" toggleGroup="$partnerErstellen" AnchorPane.leftAnchor="208.0" AnchorPane.rightAnchor="25.0" />
-      <Button fx:id="btnChangeImage" layoutX="20.0" layoutY="76.0" mnemonicParsing="false" onAction="#profilBildAendern" prefHeight="18.0" prefWidth="67.0" styleClass="normalbtn" stylesheets="@../application/application.css" text="ändern" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="99.0">
+      <Button fx:id="btnChangeImage" layoutX="219.0" layoutY="106.0" mnemonicParsing="false" onAction="#profilBildAendern" prefHeight="18.0" prefWidth="67.0" styleClass="normalbtn" stylesheets="@../application/application.css" text="ändern" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="106.0">
          <font>
             <Font size="10.0" />
          </font>
@@ -89,7 +89,7 @@
             </Button>
          </items>
       </ToolBar>
-      <HBox alignment="CENTER" layoutX="50.0" layoutY="14.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="14.0">
+      <HBox alignment="CENTER" layoutX="65.0" layoutY="14.0" prefHeight="124.0" prefWidth="185.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="14.0">
          <children>
             <Circle fx:id="kreis" fill="DODGERBLUE" radius="62.0" stroke="BLACK" strokeType="INSIDE" />
          </children>
