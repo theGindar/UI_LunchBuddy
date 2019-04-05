@@ -50,3 +50,8 @@
 .background {
     -fx-background-image: url("bg.jpg");
 }
+
+.pwVergessenbtn {
+     -fx-background-color: transparent;
+     -fx-underline: true;
+}

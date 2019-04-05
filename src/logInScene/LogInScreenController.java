@@ -36,7 +36,10 @@ public class LogInScreenController {
 	private PasswordField PasswordLogIn;
 	@FXML
 	private Label PwFalsch;
+    @FXML
+    private Button pwvergessenBtn;
 
+    // Klick auf "Enter" Taste, um sich einzuloggen
 	@FXML
 	public void onEnter(ActionEvent ae) throws IOException {
 		System.out.println("Enter gedrückt");
@@ -49,6 +52,18 @@ public class LogInScreenController {
 		}
 
 	}
+	
+	// Klick auf Passwort vergessen Button
+    @FXML
+    void pwvergessenBtnOnClick(ActionEvent event) throws IOException {
+    	Parent pwvergessenBtnOnClickParent = FXMLLoader.load(getClass().getResource("/passwortVergessen/PasswortVergessen_gui.fxml"));
+		Scene pwvergessenBtnOnClickScene = new Scene(pwvergessenBtnOnClickParent);
+
+		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+		window.setScene(pwvergessenBtnOnClickScene);
+		window.show();
+    }
 
 	// Man kann sich nur Anmelden, wenn man seine E-Mail und sein Password angegeben
 	// hat
