@@ -38,131 +38,133 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 // ProfilBearbeiten.fmxl 
-public class ProfilBearbeitenController extends Application implements Initializable  {
-	
-	@FXML												
-	private TextField txtName;
-	@FXML
-	private TextField txtMail;
-	@FXML
-	private TextField txtStudiengang;
-	@FXML
-	private TextArea txtBeschreibung;
-	@FXML
-	private DatePicker txtAlter;
-	@FXML
-	private RadioButton ButtonPartnersuche;
-	@FXML
-	private Button btnSpeichern;
-	@FXML
-	private Button btnChangeImageB;
-	@FXML
-	private Button btnZurueck;
+public class ProfilBearbeitenController extends Application implements Initializable {
+
 	@FXML
 	private AnchorPane hintergrund;
+
 	@FXML
-	private ToggleGroup partner;
+	private TextField txtName;
+
 	@FXML
-	private PasswordField Password;
+	private TextField txtMail;
+
+	@FXML
+	private TextField txtStudiengang;
+
+	@FXML
+	private DatePicker txtAlter;
+
+	@FXML
+	private TextArea txtBeschreibung;
+
+	@FXML
+	private Button btnSpeichern;
+
+	@FXML
+	private RadioButton ButtonPartnersuche;
+
+	@FXML
+	private ToggleGroup partnerJa;
+
+	@FXML
+	private Button btnChangeImageB;
+
+	@FXML
+	private Button btnZurueck;
+
 	@FXML
 	private Circle kreis;
-    @FXML
-    private Label buttonpwfalschh;
-	
+
+	@FXML
+	private Label buttonpwfalschh;
+
 	private FileChooser fileChooser;
 	private File filepath;
-	
-		
-	
-	//Kreis erzeugen und Bild darin speichern
-@Override
-	public void initialize (URL url, ResourceBundle rb) {
+
+	// Kreis erzeugen und Bild darin speichern
+	@Override
+	public void initialize(URL url, ResourceBundle rb) {
 		kreis.setStroke(Color.SEAGREEN);
-		Image im= new Image("/application/profile_icon.png",false);
+		Image im = new Image("/application/profile_icon.png", false);
 		kreis.setFill(new ImagePattern(im));
 		kreis.setEffect(new DropShadow(+25d, 0d, +2d, Color.DARKSEAGREEN));
-		
+
 	}
 
 	// Profil kann nur gepeichert werden, wenn alle Pflichtfelder aufgefüllt wurden
-		@FXML
-		public void initialize() {
-			this.btnSpeichern.disableProperty().bind(Bindings.or(this.txtName.textProperty().isEmpty(),
-					this.txtMail.textProperty().isEmpty()));
-			this.btnSpeichern.disableProperty().bind(Bindings.or(this.Password.textProperty().isEmpty(),
-					this.txtBeschreibung.textProperty().isEmpty()));
+	@FXML
+	public void initialize() {
+		this.btnSpeichern.disableProperty()
+				.bind(Bindings.or(this.txtName.textProperty().isEmpty(), this.txtMail.textProperty().isEmpty()));
 
-		}	
-		
-		//Profilbild Ändern
-		
-		public void profilBildAendern(ActionEvent event) {
-			Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-			
-			fileChooser = new FileChooser();
-			fileChooser.setTitle("Bild auswählen");
-			
-			// Benutzerverzeichnis festlegen oder zum Laufwerk wechseln
-			String userDirectoryString = System.getProperty("Bibiothek") + "\\Bilder";
-			File userDirectory = new File(userDirectoryString);
-			
-			if(!userDirectory.canRead())
-				userDirectory = new File("c:/");
-				
-				fileChooser.setInitialDirectory(userDirectory);
-			
-			
-			this.filepath = fileChooser.showOpenDialog(stage);
-			
-			//das Profilbild ändern indem man ein neues Bild hochlädt
-			try {
-				BufferedImage bufferedImage = ImageIO.read(filepath);
-				Image image = SwingFXUtils.toFXImage(bufferedImage, null);
-				kreis.setFill(new ImagePattern(image));	
-				
-			}catch(IOException e) {
-				
-			}
+	}
+
+	// Profilbild Ändern
+
+	public void profilBildAendern(ActionEvent event) {
+		Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+		fileChooser = new FileChooser();
+		fileChooser.setTitle("Bild auswählen");
+
+		// Benutzerverzeichnis festlegen oder zum Laufwerk wechseln
+		String userDirectoryString = System.getProperty("Bibiothek") + "\\Bilder";
+		File userDirectory = new File(userDirectoryString);
+
+		if (!userDirectory.canRead())
+			userDirectory = new File("c:/");
+
+		fileChooser.setInitialDirectory(userDirectory);
+
+		this.filepath = fileChooser.showOpenDialog(stage);
+
+		// das Profilbild ändern indem man ein neues Bild hochlädt
+		try {
+			BufferedImage bufferedImage = ImageIO.read(filepath);
+			Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+			kreis.setFill(new ImagePattern(image));
+
+		} catch (IOException e) {
+
 		}
-		
-		
-	
-	
-	/**Wenn man in der ProfilbearbeitenScene den Speicher Button drückt 
-	und zur normalen ProfilScene weitergeleitet wird **/
+	}
+
+	/**
+	 * Wenn man in der ProfilbearbeitenScene den Speicher Button drückt und zur
+	 * normalen ProfilScene weitergeleitet wird
+	 **/
 	public void profilBearbeitungSpeichern(ActionEvent event) throws IOException {
 		String pattern = "[\\w\\.äöü-]+@[\\w\\.äöü-]+\\.(de|com|net|org)";
 		Pattern pt = Pattern.compile(pattern);
 		Matcher m = pt.matcher(txtMail.getText());
-		if(m.find()) {
-		
-		Parent profilBearbeitenParent = FXMLLoader.load(getClass().getResource("/profil/Profil.fxml"));
-		Scene profilBearbeitenScene = new Scene(profilBearbeitenParent);
-		
-		
-		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-		
-		window.setScene(profilBearbeitenScene);
-		window.show();
-	}else {
-		buttonpwfalschh.setText("Bitte eine korrekte E-Mail eingeben");
-		buttonpwfalschh.setTextFill(Color.web("#FF0000"));
-		
+		if (m.find()) {
+
+			Parent profilBearbeitenParent = FXMLLoader.load(getClass().getResource("/profil/Profil.fxml"));
+			Scene profilBearbeitenScene = new Scene(profilBearbeitenParent);
+
+			Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+			window.setScene(profilBearbeitenScene);
+			window.show();
+		} else {
+			buttonpwfalschh.setText("Bitte eine korrekte E-Mail eingeben");
+			buttonpwfalschh.setTextFill(Color.web("#FF0000"));
+
+		}
 	}
-	}
-	
+
 	/**
 	 * Wenn man in der Profil bearbeiten Scene den Zurück-Button drückt gelangt man
 	 * wieder zum Profil
 	 **/
 	public void profilZurueckk(ActionEvent event) throws IOException {
-		
+
 		Parent profilZurueckkParent = FXMLLoader.load(getClass().getResource("/profil/Profil.fxml"));
 		Scene profilZurueckkScene = new Scene(profilZurueckkParent);
-		
-		
-		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-		
+
+		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
 		window.setScene(profilZurueckkScene);
 		window.show();
 	}
@@ -170,11 +172,7 @@ public class ProfilBearbeitenController extends Application implements Initializ
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
-		
+
 	}
-	
-
-
 
 }
-	
