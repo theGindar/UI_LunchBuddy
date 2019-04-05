@@ -55,6 +55,10 @@ public class ControllerChat implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		chatListView.setItems(messageObservableList);
 		chatListView.setCellFactory(lv -> new ChatListViewCell());
+		
+		
+		ueberschriftChat.setText(model.getName());
+		
 
 	}
 
