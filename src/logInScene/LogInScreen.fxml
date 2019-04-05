@@ -24,8 +24,8 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="txtLogINMail" layoutX="76.0" layoutY="349.0" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" />
-      <PasswordField fx:id="PasswordLogIn" layoutX="76.0" layoutY="424.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" />
+      <TextField fx:id="txtLogINMail" layoutX="76.0" layoutY="349.0" onAction="#onEnter" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" />
+      <PasswordField fx:id="PasswordLogIn" layoutX="76.0" layoutY="424.0" onAction="#onEnter" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" />
       <HBox alignment="CENTER" layoutY="66.0" prefHeight="195.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
             <ImageView fitHeight="194.0" fitWidth="254.0" pickOnBounds="true" preserveRatio="true">

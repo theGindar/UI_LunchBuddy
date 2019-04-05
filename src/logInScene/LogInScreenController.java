@@ -36,6 +36,14 @@ public class LogInScreenController {
 	private PasswordField PasswordLogIn;
 	@FXML
 	private Label PwFalsch;
+	
+	@FXML
+	public void onEnter(ActionEvent ae){
+	   System.out.println("Enter gedrückt") ;
+
+	   
+	   
+	}
 
 	// Man kann sich nur Anmelden, wenn man seine E-Mail und sein Password angegeben hat 
 	@FXML
