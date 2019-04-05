@@ -76,6 +76,7 @@ public class PasswortVergessenController {
 				pw3.setVisible(true);
 				btnNeuesPwSpeichern.setVisible(true);
 				btnBestaetigen.setVisible(false);
+				txtMail.setVisible(false);
 							
 				btnNeuesPwSpeichern.setText("Speichern");
 				labelMail.setText("Altes Password eingeben:");
