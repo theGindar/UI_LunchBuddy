@@ -24,36 +24,23 @@ import model.Model;
 
 public class PasswortVergessenController {
 
-	@FXML
-	private AnchorPane hintergrundLogIn;
+    @FXML
+    private AnchorPane hintergrundLogIn;
 
-	@FXML
-	private Button btnZurueckZuLogin;
+    @FXML
+    private Button btnZurueckZuLogin;
 
-	@FXML
-	private Label PwFalsch;
+    @FXML
+    private Label PwFalsch;
 
-	@FXML
-	private PasswordField pw1;
+    @FXML
+    private Button btnBestaetigen;
 
-	@FXML
-	private PasswordField pw2;
+    @FXML
+    private Label labelMail;
 
-	@FXML
-	private PasswordField pw3;
-
-	@FXML
-	private Button btnNeuesPwSpeichern;
-	@FXML
-	private Button btnBestaetigen;
-	@FXML
-	private Label labelpw1;
-	@FXML
-	private Label labelpw2;
-	@FXML
-	private Label labelMail;
-	@FXML
-	private TextField txtMail;
+    @FXML
+    private TextField txtMail;
 
 	// Klick auf "Enter" Taste bei email bestätigung
 	@FXML
@@ -64,14 +51,6 @@ public class PasswortVergessenController {
 
 	}
 
-	// Klick auf "Enter" Taste bei Passwort Eingabe
-	@FXML
-	public void onEnterPW(ActionEvent ae) throws IOException {
-		System.out.println("Enter gedrückt");
-
-		pwSpeichernBtn(ae);
-
-	}
 
 	// Hier wird die eMail bestätigt
 	public void eMailBestaetigen(ActionEvent event) throws IOException {
@@ -80,19 +59,8 @@ public class PasswortVergessenController {
 		Matcher m = pt.matcher(txtMail.getText());
 		if (m.find()) {
 
-			labelpw1.setVisible(true);
-			labelpw2.setVisible(true);
-			pw1.setVisible(true);
-			pw2.setVisible(true);
-			pw3.setVisible(true);
-			btnNeuesPwSpeichern.setVisible(true);
-			btnBestaetigen.setVisible(false);
-			txtMail.setVisible(false);
-
-			btnNeuesPwSpeichern.setText("Speichern");
-			labelMail.setText("Altes Password eingeben:");
-
-			PwFalsch.setText(" ");
+			PwFalsch.setText("Ihr neues Passwort wurde zugesadt!");
+			PwFalsch.setTextFill(Color.web("#12D81B"));
 
 		} else {
 			PwFalsch.setText("Bitte eine korrekte E-Mail eingeben");
@@ -101,50 +69,6 @@ public class PasswortVergessenController {
 		}
 	}
 
-	/**
-	 * Wenn man in der EinloggSceene den Anmelden-Button drückt und zum
-	 * Haupt-,SwipeScreen weitergeleitet wird
-	 **/
-	public void pwSpeichernBtn(ActionEvent event) throws IOException {
-		if (pw1.getText().trim().isEmpty()) {
-			PwFalsch.setText("Bitte alle Felder ausfüllen!");
-			PwFalsch.setTextFill(Color.web("#FF0000"));
-		}
-
-		if (pw2.getText().trim().isEmpty()) {
-			PwFalsch.setText("Bitte alle Felder ausfüllen!");
-			PwFalsch.setTextFill(Color.web("#FF0000"));
-		}
-
-		if (pw3.getText().trim().isEmpty()) {
-			PwFalsch.setText("Bitte alle Felder ausfüllen!");
-			PwFalsch.setTextFill(Color.web("#FF0000"));
-		}
-
-		if (pw3.getText().equals(pw2.getText())) {
-			if (pw1.getText().trim().isEmpty()) {
-				PwFalsch.setText("Bitte alle Felder ausfüllen!");
-				PwFalsch.setTextFill(Color.web("#FF0000"));
-			} else {
-				if (pw2.getText().trim().isEmpty()) {
-					PwFalsch.setText("Bitte alle Felder ausfüllen!");
-					PwFalsch.setTextFill(Color.web("#FF0000"));
-				} else {
-					if (pw3.getText().trim().isEmpty()) {
-						PwFalsch.setText("Bitte alle Felder ausfüllen!");
-						PwFalsch.setTextFill(Color.web("#FF0000"));
-					} else {
-						System.out.println("Korrekt!");
-						zurueckZuLogin(event);
-					}
-				}
-			}
-		} else {
-			PwFalsch.setText("Neue Passwörter nicht identisch!");
-			PwFalsch.setTextFill(Color.web("#FF0000"));
-		}
-
-	}
 
 	/**
 	 * Wenn man in der PasswordVergessenSceene den Zurück-Button drückt und zum

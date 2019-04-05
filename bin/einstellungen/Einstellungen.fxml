@@ -13,7 +13,7 @@
 	<children>
       <ToolBar prefHeight="40.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <items>
-      		<Button fx:id="btnEinstellungenZurueck" mnemonicParsing="false" onAction="#EinstellungenZurueck" styleClass="iconbtn" stylesheets="@../application/application.css">
+      		<Button fx:id="btnEinstellungenZurueck" mnemonicParsing="false" onAction="#einstellungenZurueck" styleClass="iconbtn" stylesheets="@../application/application.css">
       			<graphic>
       				<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
       					<image>
@@ -41,7 +41,7 @@
 		</Label>
 		<ToggleButton fx:id="vibrationbtn" layoutX="40.0" layoutY="177.0" mnemonicParsing="false" onAction="#VibrationAn" styleClass="normalbtn" stylesheets="@../application/application.css" text="Aktivieren" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="177.0" />
 		<ToggleButton fx:id="soundbtn" layoutX="40.0" layoutY="100.0" mnemonicParsing="false" onAction="#SoundAn" prefHeight="25.0" prefWidth="104.0" styleClass="normalbtn" stylesheets="@../application/application.css" text="Aktivieren" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="100.0" />
-		<Button fx:id="logoutbtn" layoutX="40.0" layoutY="482.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="220.0" styleClass="logoutbtn" stylesheets="@../application/application.css" text="Logout" textFill="RED" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="482.0" />
+		<Button fx:id="logoutbtn" layoutX="40.0" layoutY="465.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="220.0" styleClass="logoutbtn" stylesheets="@../application/application.css" text="Logout" textFill="RED" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="465.0" />
       <ImageView fx:id="soundOff" fitHeight="27.0" fitWidth="30.0" layoutX="78.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="70.0">
          <image>
             <Image url="@/application/soundOff.png" />
@@ -60,5 +60,6 @@
             <Image url="@/application/vibrationOn.png" />
          </image>
       </ImageView>
+      <Button fx:id="btnpwaendern" layoutX="40.0" layoutY="421.0" mnemonicParsing="false" onAction="#zuPasswortAendern" prefHeight="27.0" prefWidth="220.0" styleClass="normalbtn" stylesheets="@../application/application.css" text="Passwort ändern" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="421.0" />
 	</children>
 </AnchorPane>
