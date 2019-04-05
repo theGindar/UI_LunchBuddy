@@ -65,21 +65,20 @@ public class ProfilErstellenController extends Application implements Initializa
 	private PasswordField PasswordErstellen;
 	@FXML
 	private Circle kreis;
-    @FXML
+	@FXML
 	private Label LabelPwFalsch;
-	
+
 	private FileChooser fileChooser;
 	private File filepath;
 
-	
-	//Kreis erzeugen und Bild darin speichern
-@Override
-	public void initialize (URL url, ResourceBundle rb) {
+	// Kreis erzeugen und Bild darin speichern
+	@Override
+	public void initialize(URL url, ResourceBundle rb) {
 		kreis.setStroke(Color.SEAGREEN);
-		Image im= new Image("/application/profile_icon.png",false);
+		Image im = new Image("/application/profile_icon.png", false);
 		kreis.setFill(new ImagePattern(im));
 		kreis.setEffect(new DropShadow(+25d, 0d, +2d, Color.DARKSEAGREEN));
-		
+
 	}
 
 	// Profil kann nur erstellt werden, wenn alle Pflichtfelder aufgefüllt wurden
@@ -89,65 +88,59 @@ public class ProfilErstellenController extends Application implements Initializa
 				this.txtErstellenMail.textProperty().isEmpty()));
 		this.btnErstellenSpeichern.disableProperty().bind(Bindings.or(this.PasswordErstellen.textProperty().isEmpty(),
 				this.txtErstellenBeschreibung.textProperty().isEmpty()));
-		
-	}
-	
 
-	//Profilbild Ändern
-	
+	}
+
+	// Profilbild Ändern
+
 	public void profilBildAendern(ActionEvent event) {
 		Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-		
+
 		fileChooser = new FileChooser();
 		fileChooser.setTitle("Bild auswählen");
-		
+
 		// Benutzerverzeichnis festlegen oder zum Laufwerk wechseln
 		String userDirectoryString = System.getProperty("Bibiothek") + "\\Bilder";
 		File userDirectory = new File(userDirectoryString);
-		
-		if(!userDirectory.canRead())
+
+		if (!userDirectory.canRead())
 			userDirectory = new File("c:/");
-			
-			fileChooser.setInitialDirectory(userDirectory);
-		
-		
+
+		fileChooser.setInitialDirectory(userDirectory);
+
 		this.filepath = fileChooser.showOpenDialog(stage);
-		
-		//das Profilbild ändern indem man ein neues Bild hochlädt
+
+		// das Profilbild ändern indem man ein neues Bild hochlädt
 		try {
 			BufferedImage bufferedImage = ImageIO.read(filepath);
 			Image image = SwingFXUtils.toFXImage(bufferedImage, null);
 			kreis.setFill(new ImagePattern(image));
-			
-		}catch(IOException e) {
-			
+
+		} catch (IOException e) {
+
 		}
 	}
-	
-	
-	
-	
-	
+
 	/// **Wenn man in der ProfilErstellenScreen den Erstellen-Button drückt
 	// und zum SwipeScreen weitergeleitet wird **/
 	public void profilErstellenSpeichern(ActionEvent event) throws IOException {
-		
+
 		String pattern = "[\\w\\.äöü-]+@[\\w\\.äöü-]+\\.(de|com|net|org)";
 		Pattern pt = Pattern.compile(pattern);
 		Matcher m = pt.matcher(txtErstellenMail.getText());
-		if(m.find()) {
+		if (m.find()) {
 
-		Parent profilErstellenParent = FXMLLoader.load(getClass().getResource("/swipeScreen/Swipe.fxml"));
-		Scene profilErstellenScene = new Scene(profilErstellenParent);
+			Parent profilErstellenParent = FXMLLoader.load(getClass().getResource("/swipeScreen/Swipe.fxml"));
+			Scene profilErstellenScene = new Scene(profilErstellenParent);
 
-		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+			Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-		window.setScene(profilErstellenScene);
-		window.show();} 
-		else {
+			window.setScene(profilErstellenScene);
+			window.show();
+		} else {
 			LabelPwFalsch.setText("Bitte eine korrekte E-Mail eingeben");
 			LabelPwFalsch.setTextFill(Color.web("#FF0000"));
-			
+
 		}
 	}
 
@@ -169,7 +162,7 @@ public class ProfilErstellenController extends Application implements Initializa
 	@Override
 	public void start(Stage arg0) throws Exception {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }
