@@ -51,9 +51,7 @@ public class PasswortVergessenController {
 	@FXML
 	private Label labelpw2;
 	@FXML
-	private Label label;
-	@FXML
-	private Label labelPw;
+	private Label labelMail;
 	@FXML
 	private TextField txtMail;
 	
@@ -76,11 +74,11 @@ public class PasswortVergessenController {
 				pw1.setVisible(true);
 				pw2.setVisible(true);
 				pw3.setVisible(true);
-				labelPw.setVisible(true);
 				btnNeuesPwSpeichern.setVisible(true);
 				btnBestaetigen.setVisible(false);
-				
+							
 				btnNeuesPwSpeichern.setText("Speichern");
+				labelMail.setText("Altes Password eingeben:");
 				
 			} else {
 				PwFalsch.setText("Bitte eine korrekte E-Mail eingeben");
