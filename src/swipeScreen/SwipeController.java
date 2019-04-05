@@ -131,11 +131,11 @@ public class SwipeController extends Application implements Initializable {
 		Parent chatlistUI = chatlistLoader.load();
 		
 		
-		Scene ZumChatScene = new Scene(chatlistUI);
+		Scene zumChatScene = new Scene(chatlistUI);
 
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-		window.setScene(ZumChatScene);
+		window.setScene(zumChatScene);
 		window.show();
 	}
 

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import chatlist.ControllerChatlist;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -78,13 +79,18 @@ public class ControllerChat implements Initializable {
 	 * weitergeleitet wird
 	 **/
 	public void zurueckZuChatliste(ActionEvent event) throws IOException {
-
-		Parent zurueckZurChatlisteParent = FXMLLoader.load(getClass().getResource("/swipeScreen/Swipe.fxml"));
-		Scene zurueckZurChatlisteScene = new Scene(zurueckZurChatlisteParent);
+		Model model = new Model();
+		
+		FXMLLoader chatlistLoader = new FXMLLoader(getClass().getResource("/chatlist/Chats_gui.fxml"));
+		chatlistLoader.setController(new ControllerChatlist(model));
+		Parent chatlistUI = chatlistLoader.load();
+		
+		
+		Scene zumChatScene = new Scene(chatlistUI);
 
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-		window.setScene(zurueckZurChatlisteScene);
+		window.setScene(zumChatScene);
 		window.show();
 	}
 }
