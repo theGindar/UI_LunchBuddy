@@ -44,13 +44,49 @@ public class PasswortVergessenController {
 
 	@FXML
 	private Button btnNeuesPwSpeichern;
+	@FXML
+	private Button btnBestaetigen;
+	@FXML
+	private Label labelpw1;
+	@FXML
+	private Label labelpw2;
+	@FXML
+	private Label label;
+	@FXML
+	private Label labelPw;
+	@FXML
+	private TextField txtMail;
 	
 	
-	//Mache ich ganz am Schluss. //Kevin
+	//Mache ich ganz am Schluss. //Kevin Alles Klar CHEF
 	@FXML
 	public void onEnter(ActionEvent ae) throws IOException {
 		System.out.println("Enter gedrückt");
+	}
+		
+	//Hier wird die eMail bestätigt
+		public void eMailBestaetigen(ActionEvent event) throws IOException {
+			String pattern = "[\\w\\.äöü-]+@[\\w\\.äöü-]+\\.(de|com|net|org)";
+			Pattern pt = Pattern.compile(pattern);
+			Matcher m = pt.matcher(txtMail.getText());
+			if (m.find()) {
+				
+				labelpw1.setVisible(true);
+				labelpw2.setVisible(true);
+				pw1.setVisible(true);
+				pw2.setVisible(true);
+				pw3.setVisible(true);
+				labelPw.setVisible(true);
+				btnNeuesPwSpeichern.setVisible(true);
+				btnBestaetigen.setVisible(false);
+				
+				btnNeuesPwSpeichern.setText("Speichern");
+				
+			} else {
+				PwFalsch.setText("Bitte eine korrekte E-Mail eingeben");
+				PwFalsch.setTextFill(Color.web("#FF0000"));
 
+			}
 	}
 	
 	
@@ -70,43 +106,39 @@ public class PasswortVergessenController {
 
 	// Man kann sich nur Anmelden, wenn man seine E-Mail und sein Password angegeben
 	// hat
-	@FXML
-	public void initialize() {
-		this.btnNeuesPwSpeichern.disableProperty().bind(
-				Bindings.or(this.pw2.textProperty().isEmpty(), this.pw3.textProperty().isEmpty()));
-
-	}
-	
+//	@FXML
+//	public void initialize() {
+//		this.btnNeuesPwSpeichern.disableProperty().bind(
+//				Bindings.or(this.pw2.textProperty().isEmpty(), this.pw3.textProperty().isEmpty()));
+//
+//	}
+//	
 	
 	/**
 	 * Wenn man in der EinloggSceene den Anmelden-Button drückt und zum
 	 * Haupt-,SwipeScreen weitergeleitet wird
 	 **/
 	public void pwSpeichernBtn(ActionEvent event) throws IOException {
-
+		
+		
 
 	}
 	
 
 	/**
-	 * Wenn man in der EinloggSceene den Zurück-Button drückt und zum
-	 * AnfangsScreen(Profil erstellen//anmelden) weitergeleitet wird
+	 * Wenn man in der PasswordVergessenSceene den Zurück-Button drückt und zum
+	 * LogInScene weitergeleitet wird
 	 **/
 	public void zurueckZuLogin(ActionEvent event) throws IOException {
 
-		Model model = new Model();
-		
-		FXMLLoader chatlistLoader = new FXMLLoader(getClass().getResource("/einstellungen/Einstellungen.fxml"));
-		chatlistLoader.setController(new ControllerChatlist(model));
-		Parent chatlistUI = chatlistLoader.load();
-		
-		
-		Scene zumChatScene = new Scene(chatlistUI);
+		Parent zurueckZuLoginParent = FXMLLoader.load(getClass().getResource("/logInScene/LogInScreen.fxml"));
+		Scene zurueckZuLoginScene = new Scene(zurueckZuLoginParent);
 
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-		window.setScene(zumChatScene);
+		window.setScene(zurueckZuLoginScene);
 		window.show();
-	}
+	
 
+}
 }
