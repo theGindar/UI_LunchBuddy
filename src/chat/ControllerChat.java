@@ -18,12 +18,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import model.Model;
 
 public class ControllerChat implements Initializable {
-	
-	
+
 	private final Model model;
 	@FXML
 	private ListView<ChatMessage> chatListView;
@@ -33,33 +33,37 @@ public class ControllerChat implements Initializable {
 
 	@FXML
 	private Button btnSend;
-	
-    @FXML
-    private Label ueberschriftChat;
+
+	@FXML
+	private Label ueberschriftChat;
 
 	@FXML
 	private TextField textFeldChat;
 
 	private ObservableList<ChatMessage> messageObservableList;
+	
+	@FXML
+	public void onEnter(ActionEvent ae) throws IOException {
+		System.out.println("Enter gedrückt");
+
+		btnSendonclick(ae);
+
+	}
 
 	public ControllerChat(Model model) {
 		this.model = model;
 		messageObservableList = FXCollections.observableArrayList();
-		messageObservableList.addAll(
-				new ChatMessage("Guten Tag", true), 
-				new ChatMessage(model.getName(), false));
-		
-		//ueberschriftChat.setText("Hallo");
+		messageObservableList.addAll(new ChatMessage("Guten Tag", true), new ChatMessage(model.getName(), false));
+
+		// ueberschriftChat.setText("Hallo");
 	}
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		chatListView.setItems(messageObservableList);
 		chatListView.setCellFactory(lv -> new ChatListViewCell());
-		
-		
+
 		ueberschriftChat.setText(model.getName());
-		
 
 	}
 
@@ -71,7 +75,6 @@ public class ControllerChat implements Initializable {
 		System.out.println(textFeldChat.getText());
 		textFeldChat.setText("");
 
-
 	}
 
 	/**
@@ -80,12 +83,11 @@ public class ControllerChat implements Initializable {
 	 **/
 	public void zurueckZuChatliste(ActionEvent event) throws IOException {
 		Model model = new Model();
-		
+
 		FXMLLoader chatlistLoader = new FXMLLoader(getClass().getResource("/chatlist/Chats_gui.fxml"));
 		chatlistLoader.setController(new ControllerChatlist(model));
 		Parent chatlistUI = chatlistLoader.load();
-		
-		
+
 		Scene zumChatScene = new Scene(chatlistUI);
 
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
