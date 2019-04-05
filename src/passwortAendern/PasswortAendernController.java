@@ -101,10 +101,6 @@ public class PasswortAendernController {
 		}
 	}
 
-	/**
-	 * Wenn man in der EinloggSceene den Anmelden-Button drückt und zum
-	 * Haupt-,SwipeScreen weitergeleitet wird
-	 **/
 	public void pwSpeichernBtn(ActionEvent event) throws IOException {
 		if (pw1.getText().trim().isEmpty()) {
 			PwFalsch.setText("Bitte alle Felder ausfüllen!");
@@ -155,11 +151,11 @@ public class PasswortAendernController {
 
 	/**
 	 * Wenn man in der PasswordVergessenSceene den Zurück-Button drückt und zum
-	 * LogInScene weitergeleitet wird
+	 * EinstellungScene weitergeleitet wird
 	 **/
 	public void zurueckZuEinstellungen(ActionEvent event) throws IOException {
 
-		Parent zurueckZuEinstellungenParent = FXMLLoader.load(getClass().getResource("/einstellungen/EinstellungenController.fxml"));
+		Parent zurueckZuEinstellungenParent = FXMLLoader.load(getClass().getResource("/einstellungen/Einstellungen.fxml"));
 		Scene zurueckZuEinstellungenScene = new Scene(zurueckZuEinstellungenParent);
 
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
